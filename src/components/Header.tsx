@@ -1,3 +1,6 @@
+//import { useContext } from 'react'
+//import { DarkModeContext } from '../context/themeContext'
+
 import Button from './Button'
 import Navbar from './Navbar'
 
@@ -5,12 +8,16 @@ import CoverPicture from "./CoverPhoto"
 import ProfilePic from '../assets/profile-pic.jpg'
 
 interface HeaderProps {
-  setRenderThis: React.Dispatch<React.SetStateAction<string>>
+  renderThis: string;
+  setRenderThis: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Header = ({ setRenderThis }: HeaderProps) => {
+const Header = ({ renderThis, setRenderThis }: HeaderProps) => {
+
+  //const { darkMode } = useContext(DarkModeContext)
+
   return (
-    <div className='flex flex-col items-center h-[85%] bg-zinc-100'>
+    <div className={`flex flex-col items-center h-[85%] bg-zinc-100`}>
       <CoverPicture />
       <div className="flex justify-between items-center w-[70%] h-auto px-3">
         <div className="flex items-center gap-5 px-5 -mt-14">
@@ -23,7 +30,7 @@ const Header = ({ setRenderThis }: HeaderProps) => {
         </div>
         <Button text="Download my CV" color="bg-green-500" />
       </div>
-      <Navbar setRenderThis={setRenderThis} />
+      <Navbar renderThis={renderThis} setRenderThis={setRenderThis} />
     </div>
   )
 }

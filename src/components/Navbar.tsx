@@ -1,10 +1,11 @@
 import DarkDayButton from "./DarkDayButton";
 
 interface NavbarProps {
+  renderThis: string;
   setRenderThis: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Navbar = ({ setRenderThis }:NavbarProps) => {
+const Navbar = ({ renderThis, setRenderThis }:NavbarProps) => {
 
   const renderThisSection = (section: string) => setRenderThis(section)
 
@@ -13,21 +14,21 @@ const Navbar = ({ setRenderThis }:NavbarProps) => {
         <div className="flex gap-5">
             <button 
               onClick={() => renderThisSection('About')} 
-              className="p-3 font-semibold hover:bg-gray-300 rounded-md duration-150" 
+              className={`${renderThis == 'About' ? 'bg-gray-300' : ''} p-3 font-semibold hover:bg-gray-300 rounded-md duration-150`} 
               type="button"
             >
               About
             </button>
             <button 
               onClick={() => renderThisSection('Skills')} 
-              className="p-3 font-semibold hover:bg-gray-300 rounded-md duration-150" 
+              className={`${renderThis == 'Skills' ? 'bg-gray-300' : ''} p-3 font-semibold hover:bg-gray-300 rounded-md duration-150`}
               type="button"
             >
               Skills
             </button>
             <button 
               onClick={() => renderThisSection('Experience')} 
-              className="p-3 font-semibold hover:bg-gray-300 rounded-md duration-150" 
+              className={`${renderThis == 'Experience' ? 'bg-gray-300' : ''} p-3 font-semibold hover:bg-gray-300 rounded-md duration-150`}
               type="button"
             >
               Experience

@@ -18,6 +18,7 @@ function DarkDayButton() {
     <>
         <div className={`flex relative w-20 items-center ${colorTheme ? 'bg-slate-300' : 'bg-slate-800'} rounded-full`}>
             <button 
+                type='button'
                 onClick={toggleTheme} 
                 className={`${colorTheme ? 'left-0 bg-yellow-300' : 'left-9 bg-neutral-400' } absolute text-center p-3 border-2 rounded-full duration-150`}
                 >

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+//import { DarkModeProvider } from './context/themeContext'
 
 import Header from "./components/Header"
 import Body from './components/Body'
@@ -7,9 +8,12 @@ function App() {
 
   const [renderThis, setRenderThis] = useState<string>('About')
 
+  //<DarkModeProvider>
+  //</DarkModeProvider>
+
   return (
     <div>
-      <Header setRenderThis={setRenderThis} />
+      <Header renderThis={renderThis} setRenderThis={setRenderThis} />
       <Body renderThis={renderThis} />
     </div>
   )

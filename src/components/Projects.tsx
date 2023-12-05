@@ -182,12 +182,12 @@ function Projects() {
             projects.map((project, index) => {
                 return (
                     <div className="flex flex-col gap-3 p-3 bg-white rounded-md" key={index}>
-                        <h1>{project.name}</h1>
+                        <h1 className="font-bold text-3xl">{project.name}</h1>
                         <p>{project.description}</p>
-                        <img className='h-auto w-auto' src={project.image} alt="project_img" />
-                        <p>Techstack: {project.techStack.join(', ')}</p>
-                        <a className="hover:text-blue-400 hover:underline duration-150" href={project.url} target="_blank" rel="noopener">Project link</a>
-                        <a className="hover:text-blue-400 hover:underline duration-150" href={project.repository} target="_blank" rel="noopener">Project Repository</a>
+                        <img className='h-auto w-auto rounded-md border-2' src={project.image} alt="project_img" />
+                        <p className="text-lg font-mono"><span className="font-bold font-sans">Techstack:</span> {project.techStack.join(', ')}</p>
+                        <a className="underline hover:text-blue-400 duration-150" href={project.url} target="_blank" rel="noopener">Project link</a>
+                        <a className="underline hover:text-blue-400 duration-150" href={project.repository} target="_blank" rel="noopener">Project Repository</a>
                         <div className="flex justify-center">
                             <button className="flex items-center justify-center w-28 gap-1 p-1 rounded-md bg-green-300 hover:bg-green-400 duration-150" type="button">
                                 <h1><AiOutlineLike /></h1>

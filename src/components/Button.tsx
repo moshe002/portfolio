@@ -1,16 +1,20 @@
+import MyCV from '../assets/MosesFat_Resume.pdf'
+
 interface ButtonProps {
     text: string,
     color: string
 }
 
-
 const Button = ({ text, color }: ButtonProps) => {
+
   return (
-    <button 
-        className={`${color} p-3 h-16 text-white rounded-md font-semibold`} 
-        type='button'>
-            {text}
-    </button>
+    <a 
+      download={true}
+      href={MyCV}
+      className={`${color} p-3 text-white rounded-md font-semibold`} 
+    >
+      {text}
+    </a>
   )
 }
 
