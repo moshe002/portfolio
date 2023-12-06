@@ -19,14 +19,14 @@ const Header = ({ renderThis, setRenderThis }: HeaderProps) => {
   return (
     <div className={`flex flex-col items-center h-[85%] bg-zinc-100`}>
       <CoverPicture />
-      <div className="flex justify-between items-center w-[70%] h-auto px-3">
-        <div className="flex items-center gap-5 px-5 -mt-14">
+      <div className="flex flex-col sm:flex-row justify-between items-center w-[70%] h-auto px-3">
+        <div className="flex flex-col sm:flex-row items-center gap-0 sm:gap-5 px-5 -mt-10 sm:-mt-14">
           <img 
-            className="border-4 border-white rounded-full w-48 h-48 z-50" 
+            className="border-4 border-white rounded-full w-28 h-28 sm:w-48 sm:h-48 z-50" 
             src={ProfilePic} 
             alt="profile_pic" 
           />
-          <h1 className="text-3xl font-semibold mt-14">Moses Anthony Y. Fat</h1>
+          <h1 className="text-center text-base sm:text-3xl font-semibold sm:mt-14">Moses Anthony Y. Fat</h1>
         </div>
         <Button text="Download my CV" color="bg-green-500" />
       </div>

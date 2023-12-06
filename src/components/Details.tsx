@@ -5,7 +5,7 @@ import { GiBodyHeight } from "react-icons/gi";
 
 function Details() {
   return (
-    <div className="flex flex-col gap-3 w-[35%] h-max p-3 rounded-md bg-zinc-100 overflow-hidden">
+    <div className="flex flex-col gap-3 w-full sm:w-[35%] h-max p-3 rounded-md bg-zinc-100 overflow-hidden">
         <div className="p-3 rounded-md bg-white">
             <h1 className="font-bold text-xl">Personal Details</h1>
             <ul className="flex flex-col gap-3 mt-5">

@@ -11,7 +11,7 @@ const Button = ({ text, color }: ButtonProps) => {
     <a 
       download={true}
       href={MyCV}
-      className={`${color} p-3 text-white rounded-md font-semibold`} 
+      className={`mt-2 sm:mt-0 ${color} p-3 text-white rounded-md font-semibold text-center`} 
     >
       {text}
     </a>

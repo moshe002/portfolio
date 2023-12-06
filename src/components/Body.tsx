@@ -23,7 +23,7 @@ const Body = ({ renderThis } : BodyProps) => {
 
   return (
     <div className="flex justify-center h-screen mt-5 mb-5">
-      <div className="flex gap-5 w-[70%]">
+      <div className="flex flex-col sm:flex-row gap-7 sm:gap-5 w-[70%]">
         {
           RenderSection(renderThis)
         }        

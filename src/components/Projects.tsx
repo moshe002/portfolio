@@ -174,7 +174,7 @@ const projects = [
 
 function Projects() {
   return (
-    <div className="flex flex-col h-full relative gap-5 w-[65%] p-3 rounded-md bg-zinc-100 overflow-auto">
+    <div className="flex flex-col h-full relative gap-5 w-full sm:w-[65%] p-3 rounded-md bg-zinc-100 overflow-auto">
         <div className="sticky">
             <h1 className="font-bold text-xl">Projects Made</h1>
         </div>

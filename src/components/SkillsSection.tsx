@@ -81,7 +81,7 @@ const languages = [
 function SkillsSection() {
   return (
     <div className="flex flex-col gap-5 p-5 w-full h-max bg-zinc-100 rounded-md">
-      <div className="flex gap-10">
+      <div className="flex flex-col sm:flex-row gap-10">
         <div className="flex flex-col gap-3 p-3 w-full bg-white rounded-md">
           <h1 className="font-bold text-2xl">Technical Skills</h1>
             <ul className="list-disc list-inside">
@@ -104,7 +104,7 @@ function SkillsSection() {
             </ul>
         </div>
       </div>
-      <div className="flex flex-wrap gap-5 text-center p-1 w-full bg-white rounded-md">
+      <div className="flex flex-wrap gap-5 justify-center text-center p-1 w-full bg-white rounded-md">
         {
           languages.map((language, index) => {
             return(
