@@ -1,4 +1,5 @@
 import { AiOutlineLike } from "react-icons/ai";
+import { useTheme } from "../context/themeContext";
 
 import AlbertosPic from '../assets/albertos1.png'
 import BisayadlePic from '../assets/bisayadle2.png'
@@ -173,15 +174,18 @@ const projects = [
 //console.log(projects)
 
 function Projects() {
+
+    const { darkMode } = useTheme()
+
   return (
-    <div className="flex flex-col h-full relative gap-5 w-full sm:w-[65%] p-3 rounded-md bg-zinc-100 overflow-auto">
+    <div className={`flex flex-col h-screen relative gap-5 w-full sm:w-[65%] p-3 rounded-md ${darkMode ? 'bg-zinc-600' : 'bg-zinc-100'}  overflow-y-auto`}>
         <div className="sticky">
-            <h1 className="font-bold text-xl">Projects Made</h1>
+            <h1 className={`font-bold ${darkMode ? 'text-white' : 'text-black'} text-xl`}>Projects Made</h1>
         </div>
         {
             projects.map((project, index) => {
                 return (
-                    <div className="flex flex-col gap-3 p-3 bg-white rounded-md" key={index}>
+                    <div className={`flex flex-col gap-3 p-3 ${darkMode ? 'text-white' : 'text-black'} ${darkMode ? 'bg-gray-500' : 'bg-white'}  rounded-md`} key={index}>
                         <h1 className="font-bold text-3xl">{project.name}</h1>
                         <p>{project.description}</p>
                         <img className='h-auto w-auto rounded-md border-2' src={project.image} alt="project_img" />

@@ -1,29 +1,30 @@
-import { useState } from 'react' //useContext
+//import { useState, useContext } from 'react' //useContext
 import { BsSun, BsMoon } from 'react-icons/bs'
 //import { DarkModeContext } from '../context/themeContext'
+import { useTheme } from '../context/themeContext'
 
 function DarkDayButton() {
 
-    //const { toggleDarkMode } = useContext(DarkModeContext)
+    const { darkMode, toggleDarkMode } = useTheme()
 
-    const [colorTheme, setColorTheme] = useState(true)
+    //const [colorTheme, setColorTheme] = useState(true)
 
-    const toggleTheme = () => {
-        setColorTheme(!colorTheme)
-        //console.log(colorTheme)
-        //toggleDarkMode()
-    }
+    // const toggleTheme = () => {
+    //     setColorTheme(!colorTheme)
+    //     //console.log(colorTheme)
+    //     //toggleDarkMode()
+    // }
 
   return (
     <>
-        <div className={`flex relative h-10 sm:h-auto w-20 items-center ${colorTheme ? 'bg-slate-300' : 'bg-slate-800'} rounded-full`}>
+        <div className={`flex relative h-10 sm:h-auto w-20 items-center ${darkMode ? 'bg-slate-800' : 'bg-slate-300'} rounded-full`}>
             <button 
                 type='button'
-                onClick={toggleTheme} 
-                className={`${colorTheme ? 'left-0 bg-yellow-300' : 'left-9 bg-neutral-400' } absolute text-center p-3 border-2 rounded-full duration-150`}
+                onClick={toggleDarkMode} 
+                className={`${darkMode ? 'left-9 bg-neutral-400' : 'left-0 bg-yellow-300' } absolute text-center p-3 border-2 rounded-full duration-150`}
                 >
                 {
-                    colorTheme ? <BsSun /> : <BsMoon />
+                    darkMode ? <BsMoon /> : <BsSun />
                 }
             </button>
         </div>

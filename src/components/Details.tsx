@@ -1,12 +1,17 @@
+import { useTheme } from "../context/themeContext";
+
 import { IoMdSchool } from "react-icons/io";
 import { MdOutlineDateRange, MdOutlineMailOutline  } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
 import { GiBodyHeight } from "react-icons/gi";
 
 function Details() {
+
+    const { darkMode } = useTheme()
+
   return (
-    <div className="flex flex-col gap-3 w-full sm:w-[35%] h-max p-3 rounded-md bg-zinc-100 overflow-hidden">
-        <div className="p-3 rounded-md bg-white">
+    <div className={`flex flex-col gap-3 w-full sm:w-[35%] h-max p-3 rounded-md ${darkMode ? 'bg-zinc-600' : 'bg-zinc-100'} overflow-hidden`}>
+        <div className={`p-3 rounded-md ${darkMode ? 'text-white' : 'text-black'} ${darkMode ? 'bg-gray-500' : 'bg-white'}`}>
             <h1 className="font-bold text-xl">Personal Details</h1>
             <ul className="flex flex-col gap-3 mt-5">
                 <li className="flex items-center gap-2 text-base">
@@ -27,7 +32,7 @@ function Details() {
                 </li>
             </ul>
         </div>
-        <div className="p-3 rounded-md bg-white">
+        <div className={`p-3 rounded-md ${darkMode ? 'text-white' : 'text-black'} ${darkMode ? 'bg-gray-500' : 'bg-white'}`}>
             <h1 className="font-bold text-xl">Socials</h1>
             <ul className="flex flex-col gap-3 mt-5">
                 <li className="flex items-center gap-2 text-base">
@@ -48,7 +53,7 @@ function Details() {
                 </li>
             </ul>
         </div>
-        <h1 className="text-center font-semibold">All rights reserved</h1>
+        <h1 className={`${darkMode ? 'text-white' : 'text-black'} text-center font-semibold`}>All rights reserved</h1>
     </div>
   )
 }
