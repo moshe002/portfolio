@@ -1,5 +1,7 @@
-import { AiOutlineLike } from "react-icons/ai";
-import { useTheme } from "../context/themeContext";
+import { AiOutlineLike } from "react-icons/ai"
+import { FaLink } from "react-icons/fa6"
+import { useTheme } from "../context/themeContext"
+import { RiGitRepositoryCommitsLine } from "react-icons/ri"
 
 import AlbertosPic from '../assets/albertos1.png'
 import BisayadlePic from '../assets/bisayadle2.png'
@@ -178,9 +180,9 @@ function Projects() {
     const { darkMode } = useTheme()
 
   return (
-    <div className={`flex flex-col h-screen relative gap-5 w-full sm:w-[65%] p-3 rounded-md ${darkMode ? 'bg-zinc-600' : 'bg-zinc-100'}  overflow-y-auto`}>
-        <div className="sticky">
-            <h1 className={`font-bold ${darkMode ? 'text-white' : 'text-black'} text-xl`}>Projects Made</h1>
+    <div className={`flex flex-col h-screen relative gap-3 w-full sm:w-[65%] px-3 pb-3 rounded-md ${darkMode ? 'bg-zinc-600' : 'bg-zinc-100'}  overflow-y-auto`}>
+        <div className={`${darkMode ? 'bg-zinc-600' : 'bg-zinc-100'} sticky top-0 pt-3 pb-1`}>
+            <h1 className={`font-bold ${darkMode ? 'text-white' : 'text-black'} text-xl`}>Projects I Made</h1>
         </div>
         {
             projects.map((project, index) => {
@@ -191,11 +193,27 @@ function Projects() {
                         <img className='h-auto w-auto rounded-md border-2' src={project.image} alt="project_img" />
                         <p className="text-lg font-mono"><span className="font-bold font-sans">Techstack:</span> {project.techStack.join(', ')}</p>
                         {
-                            project.url === "" ? <></> : <a className="underline hover:text-blue-400 duration-150" href={project.url} target="_blank" rel="noopener">Project link</a>
+                            project.url === "" ? 
+                            <></> 
+                            : 
+                            <div className="flex items-center gap-2 hover:text-blue-400 duration-150">
+                                <div className="pt-1">
+                                    <FaLink />
+                                </div>
+                                <a className="underline" href={project.url} target="_blank" rel="noopener">Project link</a>
+                            </div>
                         }
-                        <a className="underline hover:text-blue-400 duration-150" href={project.repository} target="_blank" rel="noopener">Project Repository</a>
+                        <div className="flex items-center gap-2 hover:text-blue-400 duration-150">
+                            <div className="pt-1">
+                                <RiGitRepositoryCommitsLine />    
+                            </div>
+                            <a className="underline" href={project.repository} target="_blank" rel="noopener">Project Repository</a>
+                        </div>
                         <div className="flex justify-center">
-                            <button className="flex items-center justify-center w-28 gap-1 p-1 rounded-md bg-green-300 hover:bg-green-400 duration-150" type="button">
+                            <button 
+                                title="This doesn't work yet..."
+                                className="flex items-center justify-center w-28 gap-1 p-1 rounded-md bg-green-300 hover:bg-green-400 duration-150" 
+                                type="button">
                                 <h1><AiOutlineLike /></h1>
                                 <h1>Like</h1>
                             </button>

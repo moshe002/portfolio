@@ -28,7 +28,10 @@ const Header = ({ renderThis, setRenderThis }: HeaderProps) => {
             src={ProfilePic} 
             alt="profile_pic" 
           />
-          <h1 className={`${darkMode ? 'text-white' : 'text-black'} text-center text-base sm:text-3xl font-semibold sm:mt-14`}>Moses Anthony Y. Fat</h1>
+          <div className='flex flex-col gap-1 text-center'>
+            <h1 className={`${darkMode ? 'text-white' : 'text-black'} text-center text-base sm:text-3xl font-semibold sm:mt-14`}>Moses Anthony Y. Fat</h1>     
+            <p title='My nicknames' className={`${darkMode ? 'text-white' : 'text-black'} italic text-xs sm:text-sm`}>(Moshe, Moi, Anton, Moses)</p>       
+          </div>
         </div>
         <Button text="Download my CV" color="bg-green-500" />
       </div>

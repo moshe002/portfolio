@@ -108,7 +108,9 @@ function SkillsSection() {
             </ul>
         </div>
       </div>
-      <div className={`flex flex-wrap gap-5 justify-center text-center p-1 w-full ${darkMode ? 'text-white' : 'text-black'} ${darkMode ? 'bg-gray-500' : 'bg-white'} rounded-md`}>
+      <div className={`flex flex-col text-center py-3 gap-3 w-full ${darkMode ? 'text-white' : 'text-black'} ${darkMode ? 'bg-gray-500' : 'bg-white'} rounded-md`}>
+        <h1 className="font-bold text-sm sm:text-2xl">Technologies/Programming Languages Used</h1>
+        <div className="flex flex-wrap gap-5 justify-center">       
         {
           languages.map((language, index) => {
             return(
@@ -119,6 +121,7 @@ function SkillsSection() {
             )
           })
         }
+        </div>
       </div>
     </div>
   )
