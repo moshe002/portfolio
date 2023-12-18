@@ -3,6 +3,9 @@ import { FaLink } from "react-icons/fa6"
 import { useTheme } from "../context/themeContext"
 import { RiGitRepositoryCommitsLine } from "react-icons/ri"
 
+import BisdaKids from '../assets/bisdakids.png'
+import BisdaKidsAdmin from '../assets/bisdakids_admin.png'
+import Shugyopedia from '../assets/shugyopedia.png'
 import AlbertosPic from '../assets/albertos1.png'
 import BisayadlePic from '../assets/bisayadle2.png'
 import WhatToPlay from '../assets/whatoplay2.png'
@@ -17,6 +20,45 @@ import PraybookMobile from '../assets/praybook_mobile.jpg'
 import Hangman from '../assets/hangman.jpg'
 
 const projects = [
+    {
+        "name": "BisdaKids Mobile Game",
+        "image": BisdaKids,
+        "description": "A capstone project aiming to solve the decline in bisaya proficiency.",    
+        "techStack": [
+            "Godot",
+            "GDScript",
+            "Supabase",
+            "PHP"
+        ],
+        "repository": "https://github.com/white-dough/Bisdakids",
+        "url": "https://drive.google.com/drive/folders/12iayquowvc2UiWVJbCvW26pQnY9XfNr9?usp=drive_link",
+    },
+    {
+        "name": "BisdaKids Admin Site",
+        "image": BisdaKidsAdmin,
+        "description": "The admin site for BisdaKids mobile game.",    
+        "techStack": [
+            "React.js",
+            "Tailwind",
+            "Supabase",
+            "Vite"
+        ],
+        "repository": "https://github.com/moshe002/BisdaKids-Admin-WebApp",
+        "url": "",
+    },
+    {
+        "name": "Shugyopedia",
+        "image": Shugyopedia,
+        "description": "A knowledge site webapp.",    
+        "techStack": [
+            "C#",
+            "ASP.NET Core",
+            "Bootstrap",
+            "CSS"
+        ],
+        "repository": "https://github.com/Chloiemarcoq/ShugyoPedia",
+        "url": "",
+    },
     {
         "name": "Albertos",
         "image": AlbertosPic,
