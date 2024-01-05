@@ -3,7 +3,8 @@ import { useTheme } from "../context/themeContext";
 import { IoMdSchool } from "react-icons/io";
 import { MdOutlineDateRange, MdOutlineMailOutline  } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
-import { GiBodyHeight } from "react-icons/gi";
+import { MdLocalPhone } from "react-icons/md";
+//import { GiBodyHeight } from "react-icons/gi";
 
 function Details() {
 
@@ -27,9 +28,18 @@ function Details() {
                     <h1>Township, Poog, Toledo City, Cebu, Philippines</h1>
                 </li>
                 <li className="flex items-center gap-2 text-base">
-                    <h1><GiBodyHeight /></h1>
-                    <h1>5'8</h1>
+                    <h1><MdLocalPhone /></h1>
+                    <h1 title="Globe">0906 268 9710</h1>
                 </li>
+                {
+                    /* 
+                    <li className="flex items-center gap-2 text-base">
+                        <h1><GiBodyHeight /></h1>
+                        <h1>5'8</h1>
+                    </li>
+                    */
+                }
+                
             </ul>
         </div>
         <div className={`p-3 rounded-md ${darkMode ? 'text-white' : 'text-black'} ${darkMode ? 'bg-gray-500' : 'bg-white'}`}>

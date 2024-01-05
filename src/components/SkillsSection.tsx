@@ -94,7 +94,7 @@ function SkillsSection() {
               <li>Basic Hardware Troubleshooting</li>
               <li>Basic Software Troubleshooting</li>
               <li>Basic MS Office Skills</li>
-              <li>85+ wpm</li>
+              <li>80+ wpm</li>
             </ul>
         </div>
         <div className={`flex flex-col gap-3 p-3 w-full ${darkMode ? 'text-white' : 'text-black'} ${darkMode ? 'bg-gray-500' : 'bg-white'} rounded-md`}>
@@ -105,6 +105,7 @@ function SkillsSection() {
               <li>Fast Learner</li>
               <li>Good Time Management</li>
               <li>Hardworking</li>
+              <li>Enthusiastic</li>
             </ul>
         </div>
       </div>
