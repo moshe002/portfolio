@@ -34,10 +34,9 @@ function ExperienceSection() {
           {
             certificates.map((certificate, index) => {
               return (
-                <div className={`${darkMode ? 'bg-gray-500' : 'bg-white'} p-3 rounded-md`}>
+                <div className={`${darkMode ? 'bg-gray-500' : 'bg-white'} p-3 rounded-md`} key={index}>
                   <img 
                     className={`hover:scale-125 duration-150 ${darkMode ? '' : 'border-2 border-gray-300'} sm:w-[85] sm:h-60 rounded-md`} 
-                    key={index} 
                     src={certificate} 
                     alt={certificate} 
                   />
