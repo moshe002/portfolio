@@ -3,6 +3,7 @@ import { FaLink } from "react-icons/fa6"
 import { useTheme } from "../context/themeContext"
 import { RiGitRepositoryCommitsLine } from "react-icons/ri"
 
+import Karaokify from '../assets/karaokify.png'
 import BisdaKids from '../assets/bisdakids.png'
 import BisdaKidsAdmin from '../assets/bisdakids_admin.png'
 import Shugyopedia from '../assets/shugyopedia.png'
@@ -20,6 +21,20 @@ import PraybookMobile from '../assets/praybook_mobile.jpg'
 import Hangman from '../assets/hangman.jpg'
 
 const projects = [
+    {
+        "name": "Karaokify",
+        "image": Karaokify,
+        "description": "A Karaoke webapp that lets you sing online.",    
+        "techStack": [
+            "React.js",
+            "TypeScript",
+            "Tailwind",
+            "Youtube API",
+            "Vite"
+        ],
+        "repository": "https://github.com/moshe002/karaokify",
+        "url": "https://karaokify.netlify.app/",
+    },
     {
         "name": "BisdaKids Mobile Game",
         "image": BisdaKids,
