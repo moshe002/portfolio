@@ -1,5 +1,7 @@
 import { useTheme } from "../context/themeContext"
 
+import ProblemSolving from '../assets/certifImages/Basic Problem Solving Certificate.png'
+import SQL from '../assets/certifImages/Intro SQL Certificate.jpg'
 import CSharpIntroCertif from '../assets/certifImages/introcsharp.jpg'
 import CsharpIntermediate from '../assets/certifImages/csharpintermediate.jpg'
 import JavaScriptIntro from '../assets/certifImages/introjavascript.png'
@@ -15,6 +17,8 @@ function ExperienceSection() {
   const { darkMode } = useTheme()
 
   const certificates = [
+    ProblemSolving,
+    SQL,
     CSharpIntroCertif,
     CsharpIntermediate,
     JavaScriptIntro,

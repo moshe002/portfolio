@@ -15,7 +15,6 @@ import PrayBook from '../assets/praybooknew.png'
 import Harbest from '../assets/harbest.png'
 import rps from '../assets/rps.png'
 import Synonym from '../assets/synonym.png'
-import CebuMap from '../assets/cebu-map.png'
 import Weather from '../assets/weather.png'
 import PraybookMobile from '../assets/praybook_mobile.jpg'
 import Hangman from '../assets/hangman.jpg'
@@ -82,7 +81,7 @@ const projects = [
             "HTML",
             "CSS",
             "JavaScript",
-            "Mapbox"
+            "Mapbox API"
         ],
         "repository": "https://github.com/moshe002/albertos",
         "url": "https://albertosph.netlify.app/",
@@ -90,7 +89,7 @@ const projects = [
     {
         "name": "Bisayadle",
         "image": BisayadlePic,
-        "description": "Wordle clone but Bisaya/Cebuano.",    
+        "description": "Wordle clone but with Bisaya/Cebuano words.",    
         "techStack": [
             "TypeScript",
             "Tailwind",
@@ -108,15 +107,31 @@ const projects = [
             "TypeScript",
             "Tailwind",
             "React.js",
+            "Github API",
             "Vite"
         ],
         "repository": "https://github.com/moshe002/github-progress",
         "url": "https://github-progress.netlify.app/",
     },
     {
+        "name": "HarBest",
+        "image": Harbest,
+        "description": "A webapp for selling produce (veggies and fruits).",    
+        "techStack": [
+            "Email.js",
+            "TypeScript",
+            "React.js",
+            "Tailwind",
+            "Supabase",
+            "Vite"
+        ],
+        "repository": "https://github.com/moshe002/HarBest",
+        "url": "https://harbest.netlify.app/",
+    },
+    {
         "name": "PrayBook",
         "image": PrayBook,
-        "description": "Church booking app for easy mass and event bookings.",    
+        "description": "Church booking Webapp for convenient mass and event bookings.",    
         "techStack": [
             "React.js",
             "JavaScript",
@@ -128,18 +143,17 @@ const projects = [
         "url": "https://praybook-4b0a1.web.app/",
     },
     {
-        "name": "HarBest",
-        "image": Harbest,
-        "description": "A webapp for selling produce (veggies and fruits).",    
+        "name": "PrayBook Mobile App",
+        "image": PraybookMobile,
+        "description": "A mobile version of the PrayBook Webapp",    
         "techStack": [
-            "TypeScript",
-            "React.js",
+            "React Native",
             "Tailwind",
-            "Supabase",
-            "Vite"
+            "JavaScript",
+            "Firebase"
         ],
-        "repository": "https://github.com/moshe002/HarBest",
-        "url": "https://harbest.netlify.app/",
+        "repository": "https://github.com/moshe002/PrayBook-app-react-native",
+        "url": "",
     },
     {
         "name": "What-to-play",
@@ -148,7 +162,8 @@ const projects = [
         "techStack": [
             "React.js",
             "JavaScript",
-            "CSS"
+            "CSS",
+            "FreeToGame API",
         ],
         "repository": "https://github.com/moshe002/what-to-play",
         "url": "https://moshe002.github.io/what-to-play/",
@@ -161,7 +176,8 @@ const projects = [
             "CSS",
             "Vite",
             "React.js",
-            "JavaScript"
+            "JavaScript",
+            "Dictionary API",
         ],
         "repository": "https://github.com/moshe002/synonym-webapp",
         "url": "https://findthesynonym.netlify.app/",
@@ -182,51 +198,26 @@ const projects = [
     {
         "name": "Weather-Webapp",
         "image": Weather,
-        "description": "Let's you find the weather conditions of a city.",    
+        "description": "Lets you find the weather conditions of a city.",    
         "techStack": [
             "HTML",
             "CSS",
-            "JavaScript"
+            "JavaScript",
+            "OpenWeatherMap API",
         ],
         "repository": "https://github.com/moshe002/weather-webapp",
         "url": "https://moshe002.github.io/weather-webapp/",
     },
     {
-        "name": "PrayBook Mobile App",
-        "image": PraybookMobile,
-        "description": "A mobile version of the PrayBook Webapp",    
-        "techStack": [
-            "React Native",
-            "Tailwind",
-            "JavaScript",
-            "Firebase"
-        ],
-        "repository": "https://github.com/moshe002/PrayBook-app-react-native",
-        "url": "",
-    },
-    {
         "name": "HangMan",
         "image": Hangman,
-        "description": "A hangman game.",    
+        "description": "A hangman mobile game.",    
         "techStack": [
             "Godot",
             "GDScript"
         ],
         "repository": "https://github.com/moshe002/HangMan_GodotPractice",
         "url": "",
-    },
-    {
-        "name": "Cebu-Map",
-        "image": CebuMap,
-        "description": "A Cebu map province destination scorer.",    
-        "techStack": [
-            "JavaScript",
-            "React.js",
-            "Tailwind",
-            "Vite"
-        ],
-        "repository": "https://github.com/moshe002/cebu-map",
-        "url": "https://cebu-map.netlify.app/",
     }
 ]
 
