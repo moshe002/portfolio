@@ -16,6 +16,7 @@ function CoverPhoto({ renderThis }:CoverPhotoProps) {
             className='w-[100%] h-64 object-cover rounded-md' 
             src={CoverPhotoImage1} 
             alt="cover_photo" 
+            loading='lazy'
           />
         )
       case "Skills":
@@ -24,6 +25,7 @@ function CoverPhoto({ renderThis }:CoverPhotoProps) {
             className='w-[100%] h-64 object-cover rounded-md' 
             src={CoverPhotoImage2} 
             alt="cover_photo" 
+            loading='lazy'
           />
         )
       case "Experience":
@@ -32,6 +34,7 @@ function CoverPhoto({ renderThis }:CoverPhotoProps) {
             className='w-[100%] h-64 object-scale-down sm:object-cover rounded-md' 
             src={CoverPhotoImage3} 
             alt="cover_photo" 
+            loading='lazy'
           />
         )
     }

@@ -238,7 +238,7 @@ function Projects() {
                     <div className={`flex flex-col gap-3 p-3 ${darkMode ? 'text-white' : 'text-black'} ${darkMode ? 'bg-gray-500' : 'bg-white'}  rounded-md`} key={index}>
                         <h1 className="font-bold text-3xl">{project.name}</h1>
                         <p>{project.description}</p>
-                        <img className='h-auto w-auto rounded-md border-2' src={project.image} alt="project_img" />
+                        <img className='h-auto w-auto rounded-md border-2' src={project.image} alt="project_img" loading="lazy" />
                         <p className="text-lg font-mono"><span className="font-bold font-sans">Techstack:</span> {project.techStack.join(', ')}</p>
                         {
                             project.url === "" ? 

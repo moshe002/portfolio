@@ -116,7 +116,7 @@ function SkillsSection() {
           languages.map((language, index) => {
             return(
               <div className="flex flex-col items-center p-5" key={index}>
-                <img className="w-20 h-20" src={language.icon} alt="icon" />
+                <img className="w-20 h-20" src={language.icon} alt="icon" loading="lazy" />
                 <h1 className="font-semibold text-lg">{language.name}</h1>
               </div>
             )

@@ -28,6 +28,7 @@ const Header = ({ renderThis, setRenderThis }: HeaderProps) => {
             className={`border-4 ${darkMode ? 'border-white' : 'border-gray-300'} rounded-full w-28 h-28 sm:w-48 sm:h-48 z-50`} 
             src={ProfilePic1} 
             alt="profile_pic" 
+            loading='lazy'
           />
         )
       case "Skills":
@@ -36,6 +37,7 @@ const Header = ({ renderThis, setRenderThis }: HeaderProps) => {
             className={`border-4 ${darkMode ? 'border-white' : 'border-gray-300'} rounded-full w-28 h-28 sm:w-48 sm:h-48 z-50`} 
             src={ProfilePic2} 
             alt="profile_pic" 
+            loading='lazy'
           />
         )
       case "Experience":
@@ -44,6 +46,7 @@ const Header = ({ renderThis, setRenderThis }: HeaderProps) => {
             className={`border-4 ${darkMode ? 'border-white' : 'border-gray-300'} rounded-full w-28 h-28 sm:w-48 sm:h-48 z-50`} 
             src={ProfilePic3} 
             alt="profile_pic" 
+            loading='lazy'
           />
         )
     }

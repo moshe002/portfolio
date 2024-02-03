@@ -43,6 +43,7 @@ function ExperienceSection() {
                     className={`hover:scale-125 duration-150 ${darkMode ? '' : 'border-2 border-gray-300'} sm:w-[85] sm:h-60 rounded-md`} 
                     src={certificate} 
                     alt={certificate} 
+                    loading="lazy"
                   />
                 </div>
               )
