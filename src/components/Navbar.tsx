@@ -1,7 +1,7 @@
 import DarkDayButton from "./DarkDayButton";
 import { useTheme } from "../context/themeContext";
 
-interface NavbarProps {
+type NavbarProps = {
   renderThis: string;
   setRenderThis: React.Dispatch<React.SetStateAction<string>>;
 }
@@ -34,7 +34,7 @@ const Navbar = ({ renderThis, setRenderThis }:NavbarProps) => {
               className={`${renderThis == 'Experience' ? 'text-black' : ''} ${renderThis == 'Experience' ? 'bg-gray-300' : ''} p-3 font-semibold hover:bg-gray-300 rounded-md duration-150`}
               type="button"
             >
-              Experience
+              Certificates
             </button>
         </div>
         <DarkDayButton />

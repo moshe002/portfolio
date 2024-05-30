@@ -257,15 +257,18 @@ function Projects() {
                             </div>
                             <a className="underline" href={project.repository} target="_blank" rel="noopener">Project Repository</a>
                         </div>
-                        <div className="flex justify-center">
-                            <button 
-                                title="This doesn't work yet..."
-                                className="flex items-center justify-center w-28 gap-1 p-1 rounded-md bg-green-300 hover:bg-green-400 duration-150" 
-                                type="button">
-                                <h1><AiOutlineLike /></h1>
-                                <h1>Like</h1>
-                            </button>
-                        </div>
+                        {
+                            // <div className="flex justify-center">
+                            //     <button 
+                            //         title="This doesn't work yet..."
+                            //         className="flex items-center justify-center w-28 gap-1 p-1 rounded-md bg-green-300 hover:bg-green-400 duration-150" 
+                            //         type="button">
+                            //         <h1><AiOutlineLike /></h1>
+                            //         <h1>Like</h1>
+                            //     </button>
+                            // </div>
+                        }
+
                     </div>
                 )
             })

@@ -18,20 +18,12 @@ const languages = [
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
   },
   {
-    "name": "Python",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+    "name": "Godot",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg"
   },
   {
     "name": "C#",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
-  },
-  {
-    "name": "Java",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-  },
-  {
-    "name": "Godot",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg"
   },
   {
     "name": "ASP.NET Core",
@@ -42,12 +34,20 @@ const languages = [
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
   },
   {
+    "name": "Laravel",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg"
+  },
+  {
     "name": "MySQL",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"
   },
   {
+    "name": "Microsoft SQL Server",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg"
+  },
+  {
     "name": "Tailwind",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg"
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
   },
   {
     "name": "React",
@@ -62,10 +62,6 @@ const languages = [
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
   },
   {
-    "name": "Photoshop",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
-  },
-  {
     "name": "Git",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
   },
@@ -74,10 +70,37 @@ const languages = [
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
   },
   {
+    "name": "Gitlab",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg"
+  },
+  {
     "name": "Trello",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg"
+  },
+  {
+    "name": "Docker",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg" 
   }
-]
+];
+
+const softAndTechnicalSkills = [
+  [
+    'Computer Literate',
+    'Internet Literate',
+    'Basic Hardware Troubleshooting',
+    'Basic Software Troubleshooting',
+    'Basic MS Office Skills',
+    '80+ wpm',
+  ],
+  [
+    'Understanding',
+    'Disciplined',
+    'Fast Learner',
+    'Good Time Management',
+    'Hardworking',
+    'Enthusiastic',
+  ]
+];
 
 function SkillsSection() {
 
@@ -89,23 +112,25 @@ function SkillsSection() {
         <div className={`flex flex-col gap-3 p-3 w-full ${darkMode ? 'text-white' : 'text-black'} ${darkMode ? 'bg-gray-500' : 'bg-white'} rounded-md`}>
           <h1 className="font-bold text-2xl">Technical Skills</h1>
             <ul className="list-disc list-inside">
-              <li>Computer Literate</li>
-              <li>Internet Literate</li>
-              <li>Basic Hardware Troubleshooting</li>
-              <li>Basic Software Troubleshooting</li>
-              <li>Basic MS Office Skills</li>
-              <li>80+ wpm</li>
+              {
+                softAndTechnicalSkills[0].map((skills, i) => {
+                  return (
+                    <li key={i}>{skills}</li>
+                  );
+                })
+              }
             </ul>
         </div>
         <div className={`flex flex-col gap-3 p-3 w-full ${darkMode ? 'text-white' : 'text-black'} ${darkMode ? 'bg-gray-500' : 'bg-white'} rounded-md`}>
           <h1 className="font-bold text-2xl">Soft Skills</h1>
             <ul className="list-disc list-inside">
-              <li>Understanding</li>
-              <li>Disciplined</li>
-              <li>Fast Learner</li>
-              <li>Good Time Management</li>
-              <li>Hardworking</li>
-              <li>Enthusiastic</li>
+              {
+                softAndTechnicalSkills[1].map((skills, i) => {
+                  return (
+                    <li key={i}>{skills}</li>
+                  )
+                })
+              }
             </ul>
         </div>
       </div>

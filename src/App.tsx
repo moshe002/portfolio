@@ -9,8 +9,6 @@ function App() {
   const [renderThis, setRenderThis] = useState<string>('About')
 
   const { darkMode } = useTheme()
-  //
-  //</DarkModeProvider>
 
   return (
     <div className={`${darkMode ? 'bg-gray-500' : 'bg-white'}`}>

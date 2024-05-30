@@ -1,8 +1,8 @@
 import AboutSection from "./AboutSection"
 import SkillsSection from "./SkillsSection"
-import ExperienceSection from "./ExperienceSection"
+import CertificatesSection from "./Certificates"
 
-interface BodyProps {
+type BodyProps = {
   renderThis: string;
 }
 
@@ -17,7 +17,7 @@ const Body = ({ renderThis } : BodyProps) => {
       case "Skills":
         return <SkillsSection />
       case "Experience":
-        return <ExperienceSection />
+        return <CertificatesSection />
     }
   } 
 

@@ -59,7 +59,11 @@ function Details() {
                 </li>
                 <li className="flex items-center gap-2 text-base">
                     <img className="w-5 h-5" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="icon" loading="lazy" />
-                    <a className="hover:text-gray-500" href="https://github.com/moshe002" target="_blank" rel="noopener">Github</a>
+                    <a className={`${darkMode ? 'hover:text-black' : 'hover:text-gray-500'}`} href="https://github.com/moshe002" target="_blank" rel="noopener">Github</a>
+                </li>
+                <li className="flex items-center gap-2 text-base">
+                    <img className="w-5 h-5" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" alt="icon" loading="lazy" />
+                    <a className="hover:text-blue-400" href="https://www.linkedin.com/in/moses-anthony-fat-36962b261/" target="_blank" rel="noopener">Linkedin</a>
                 </li>
             </ul>
         </div>
