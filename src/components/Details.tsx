@@ -50,10 +50,6 @@ function Details() {
                     <p>mosesfat@gmail.com</p>
                 </li>
                 <li className="flex items-center gap-2 text-base">
-                    <img className="w-5 h-5" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="icon" loading="lazy" />
-                    <a className="hover:text-blue-500" href="https://web.facebook.com/mosesanthony873" target="_blank" rel="noopener">Facebook</a>
-                </li>
-                <li className="flex items-center gap-2 text-base">
                     <img className="w-5 h-5" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" alt="icon" loading="lazy" />
                     <a className="hover:text-blue-300" href="https://twitter.com/_mosheee" target="_blank" rel="noopener">Twitter</a>
                 </li>
