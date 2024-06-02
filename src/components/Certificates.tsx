@@ -17,6 +17,7 @@ function ExperienceSection() {
   const { darkMode } = useTheme()
 
   const certificates = [
+    '../../certificates/freecodecamp_certificate.jpg',
     '../../certificates/tech.jpg',
     '../../certificates/sql_basic certificate.png',
     '../../certificates/responsiveweb.jpg',
