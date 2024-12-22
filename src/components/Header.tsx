@@ -1,8 +1,8 @@
-import { useTheme } from '../context/themeContext'
-
-import Button from './Button'
-import Navbar from './Navbar'
-import CoverPicture from "./CoverPhoto"
+import { useTheme } from '../context/themeContext';
+import Button from './Button';
+import Navbar from './Navbar';
+import CoverPicture from "./CoverPhoto";
+import { en } from '../localization/en';
  
 type HeaderProps = {
   renderThis: string;
@@ -27,8 +27,8 @@ const Header = ({ renderThis, setRenderThis }: HeaderProps) => {
             loading='lazy'
           />
           <div className='flex flex-col gap-1 text-center'>
-            <h1 className={`${darkMode ? 'text-white' : 'text-black'} text-center text-base sm:text-3xl font-semibold sm:mt-14`}>Moses Anthony Y. Fat</h1>     
-            <p title='My nicknames' className={`${darkMode ? 'text-white' : 'text-black'} italic text-xs sm:text-sm`}>(Moshe, Moi, Anton, Moses)</p>       
+            <h1 className={`${darkMode ? 'text-white' : 'text-black'} text-center text-base sm:text-3xl font-semibold sm:mt-14`}>{en.header.fullname}</h1>     
+            <p title='My nicknames' className={`${darkMode ? 'text-white' : 'text-black'} italic text-xs sm:text-sm`}>{en.header.nicknames}</p>       
           </div>
         </div>
         <Button text="Download my CV" color="bg-green-500" />

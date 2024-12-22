@@ -1,37 +1,9 @@
-import { useTheme } from "../context/themeContext"
-
-// import ProblemSolving from '../assets/certifImages/Basic Problem Solving Certificate.png'
-// import SQL from '../assets/certifImages/Intro SQL Certificate.jpg'
-// import CSharpIntroCertif from '../assets/certifImages/introcsharp.jpg'
-// import CsharpIntermediate from '../assets/certifImages/csharpintermediate.jpg'
-// import JavaScriptIntro from '../assets/certifImages/introjavascript.png'
-// import JavaScriptIntermediate from '../assets/certifImages/javascriptintermediate.jpg'
-// import JQueryCertif from '../assets/certifImages/jquery.jpg'
-// import PythonIntro from '../assets/certifImages/python.png'
-// import ReactRedux from '../assets/certifImages/reactredux.jpg'
-// import ResponsiveWebCertif from '../assets/certifImages/responsiveweb.jpg'
-// import TechCertif from '../assets/certifImages/tech.jpg'
+import { useTheme } from "../context/themeContext";
+import { certificates } from "../data/certificates";
 
 function ExperienceSection() {
   
   const { darkMode } = useTheme()
-
-  const certificates = [
-    '../../certificates/freecodecamp_certificate.jpg',
-    '../../certificates/tech.jpg',
-    '../../certificates/sql_basic certificate.png',
-    '../../certificates/responsiveweb.jpg',
-    '../../certificates/reactredux.jpg',
-    '../../certificates/python.png',
-    '../../certificates/jquery.jpg',
-    '../../certificates/javascriptintermediate.jpg',
-    '../../certificates/javascript_basic certificate.png',
-    '../../certificates/introjavascript.png',
-    '../../certificates/introcsharp.jpg',
-    '../../certificates/Intro SQL Certificate.jpg',
-    '../../certificates/csharpintermediate.jpg',
-    '../../certificates/Basic Problem Solving Certificate.png'
-  ];
     
   return (
     <div className={`flex flex-col gap-5 p-5 w-full h-full ${darkMode ? 'bg-zinc-600' : 'bg-zinc-100'} rounded-md`}>
