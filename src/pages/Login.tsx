@@ -1,15 +1,32 @@
 import { useState } from 'react';
 import { login } from '../services/auth.service';
+import { FaRegEye } from "react-icons/fa";
+import { FaRegEyeSlash } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
   
   const [loginValues, setLoginValues] = useState({ email: "", password: ""});
+  const [showPassword, setShowPassword] = useState(false);
   
+  const navigate = useNavigate();
+
   const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const response = await login(loginValues);
-      console.log(response);
+      const result = await login(loginValues);
+      if (result) {
+        if (result?.token) {
+          localStorage.setItem('token', result.token);
+        }
+      }
+
+      const token = localStorage.getItem('token');
+      if (token) {
+        navigate('/blog-create');
+      } else {
+        console.error("Login failed. Token does not exist.");
+      }
     } catch (error) {
       console.error(error);
     }
@@ -26,30 +43,45 @@ export default function Login() {
   };
 
   return (
-    <div>
-      <div>
-        <form onSubmit={(e) => handleSubmit(e)}>
-          <div>
-            <label htmlFor="email">Email:</label>
-            <input 
-              onChange={(e) => handleChange(e)}
-              name='email'
-              id='email' 
-              type="email" 
-              required />
-          </div>
-          <div>
-            <label htmlFor="password">Password:</label>
-            <input 
-              onChange={(e) => handleChange(e)}
-              id='password'
-              name='password'
-              type="password" 
-              required />
-          </div>
-          <button type='submit'>LOGIN</button>
-        </form>
-      </div>
+    <div className='flex items-center justify-center h-screen'>
+      <form
+        className='flex flex-col justify-center gap-5 p-5 w-[30%]' 
+        onSubmit={(e) => handleSubmit(e)}>
+        <div className='flex justify-between items-center'>
+          <label htmlFor="email">Email:</label>
+          <input 
+            onChange={(e) => handleChange(e)}
+            name='email'
+            id='email' 
+            type="email" 
+            className='p-1 border-2 rounded-md outline-none text-center'
+            required />
+        </div>
+        <div className='flex justify-between relative items-center'>
+          <label htmlFor="password">Password:</label>
+          <input 
+            onChange={(e) => handleChange(e)}
+            id='password'
+            name='password'
+            type={showPassword ? 'text' : 'password'}
+            className='p-1 border-2 rounded-md outline-none text-center' 
+            required />
+          <button
+            className='absolute right-1 bottom-2 z-50 bg-white p-1 rounded-md'
+            title={showPassword ? 'Hide password' : 'Show password'} 
+            onClick={() => {
+              setShowPassword(prev => !prev)
+            }}
+          >
+            {
+              showPassword 
+              ? <FaRegEyeSlash />
+              : <FaRegEye />
+            }
+          </button>
+        </div>
+        <button type='submit' className='text-white font-semibold bg-green-400 rounded-md p-2'>LOGIN</button>
+      </form>
     </div>
   )
 }

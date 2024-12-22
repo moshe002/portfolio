@@ -11,7 +11,11 @@ const login = async (prop:LOGIN_TYPES) => {
         password: prop.password,
     });
 
-    return data ? data : error;
+    if (data && data.session) {
+        return { token: data.session.access_token };
+    } else {
+        return { message: error?.message };
+    }
 };
 
 const logout = async () => {
