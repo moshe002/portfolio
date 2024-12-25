@@ -4,10 +4,13 @@ import { MdOutlineDateRange, MdOutlineMailOutline  } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
 import { MdLocalPhone } from "react-icons/md";
 import { en } from '../localization/en';
+import { useNavigate } from 'react-router-dom';
 
 function Details() {
 
     const { darkMode } = useTheme();
+
+    const navigate = useNavigate();
 
     return (
         <div className={`flex flex-col gap-3 w-full sm:w-[35%] h-max p-3 rounded-md ${darkMode ? 'bg-zinc-600' : 'bg-zinc-100'} overflow-hidden`}>
@@ -53,7 +56,7 @@ function Details() {
                     </li>
                 </ul>
             </div>
-            <h1 className={`${darkMode ? 'text-white' : 'text-black'} text-center font-semibold`}>{en.details.rights}</h1>
+            <button onClick={() => navigate('/blog-login')} className={`${darkMode ? 'text-white' : 'text-black'} text-center font-semibold cursor-default`}>{en.details.rights}</button>
         </div>
     )
 }

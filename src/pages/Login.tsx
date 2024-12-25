@@ -43,7 +43,7 @@ export default function Login() {
   };
 
   return (
-    <div className='flex items-center justify-center h-screen'>
+    <div className='flex flex-col items-center justify-center h-screen'>
       <form
         className='flex flex-col justify-center gap-5 p-5 w-[30%]' 
         onSubmit={(e) => handleSubmit(e)}>
@@ -82,6 +82,7 @@ export default function Login() {
         </div>
         <button type='submit' className='text-white font-semibold bg-green-400 rounded-md p-2'>LOGIN</button>
       </form>
+      <button onClick={() => navigate('/')} className='text-white font-semibold bg-blue-400 rounded-md p-2'>Back to portfolio site</button>
     </div>
   )
 }
