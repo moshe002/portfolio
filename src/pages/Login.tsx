@@ -3,6 +3,7 @@ import { login } from '../services/auth.service';
 import { FaRegEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
+import { toast } from "react-toastify";
 
 export default function Login() {
   
@@ -18,14 +19,15 @@ export default function Login() {
       if (result) {
         if (result?.token) {
           localStorage.setItem('token', result.token);
+          toast('Logged in successfully.', { type: 'success' });
+        } else {
+          toast('Login failed.', { type: 'error' });
         }
       }
 
       const token = localStorage.getItem('token');
       if (token) {
         navigate('/blog-create');
-      } else {
-        console.error("Login failed. Token does not exist.");
       }
     } catch (error) {
       console.error(error);
