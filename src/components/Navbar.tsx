@@ -1,12 +1,13 @@
 import DarkDayButton from "./DarkDayButton";
 import { useTheme } from "../context/themeContext";
+import { en } from "../localization/en";
 
 type NavbarProps = {
   renderThis: string;
   setRenderThis: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Navbar = ({ renderThis, setRenderThis }:NavbarProps) => {
+const Navbar = ({ renderThis, setRenderThis } : NavbarProps) => {
 
   const { darkMode } = useTheme()
 
@@ -20,21 +21,28 @@ const Navbar = ({ renderThis, setRenderThis }:NavbarProps) => {
               className={`${renderThis == 'About' ? 'text-black' : ''} ${renderThis == 'About' ? 'bg-gray-300' : ''} p-3 font-semibold hover:bg-gray-300 rounded-md duration-150`} 
               type="button"
             >
-              About
+              {en.navbar.about}
             </button>
             <button 
               onClick={() => renderThisSection('Skills')} 
               className={`${renderThis == 'Skills' ? 'text-black' : ''} ${renderThis == 'Skills' ? 'bg-gray-300' : ''} p-3 font-semibold hover:bg-gray-300 rounded-md duration-150`}
               type="button"
             >
-              Skills
+              {en.navbar.skills}
             </button>
             <button 
               onClick={() => renderThisSection('Experience')} 
               className={`${renderThis == 'Experience' ? 'text-black' : ''} ${renderThis == 'Experience' ? 'bg-gray-300' : ''} p-3 font-semibold hover:bg-gray-300 rounded-md duration-150`}
               type="button"
             >
-              Certificates
+              {en.navbar.certificates}
+            </button>
+            <button 
+              onClick={() => renderThisSection('Blog')} 
+              className={`${renderThis == 'Blog' ? 'text-black' : ''} ${renderThis == 'Blog' ? 'bg-gray-300' : ''} p-3 font-semibold hover:bg-gray-300 rounded-md duration-150`}
+              type="button"
+            >
+              {en.navbar.my_blog}
             </button>
         </div>
         <DarkDayButton />

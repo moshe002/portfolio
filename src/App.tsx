@@ -1,8 +1,7 @@
-import { useState } from 'react'
-import { useTheme } from './context/themeContext'
-
-import Header from "./components/Header"
-import Body from './components/Body'
+import { useState } from "react";
+import { useTheme } from "./context/themeContext";
+import Header from "./components/Header";
+import Body from "./components/Body";
 
 function App() {
 
