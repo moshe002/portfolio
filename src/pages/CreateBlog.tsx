@@ -7,6 +7,7 @@ import { MdDeleteOutline } from "react-icons/md";
 import { MdOutlineModeEdit } from "react-icons/md";
 import DeleteModal from "../components/DeleteModal";
 import { toast } from "react-toastify";
+import moment from "moment";
 
 type UpdateContent = {
   id: number;
@@ -124,9 +125,9 @@ export default function CreateBlog() {
           <div className="flex flex-col items-center gap-5 p-5 mt-10">
             <Editor
               placeholder="Write your blog here..."
-              containerProps={{ style: { resize: 'vertical', height: '400px', width: '80vw' } }} 
+              containerProps={{ style: { resize: 'vertical', height: '400px', width: '80vw', overflow: 'auto' } }} 
               value={update ? updateContent.content : editorValue} 
-              onChange={(e) => handleEditorChange(e)} 
+              onChange={(e) => handleEditorChange(e)}
             />
             {
               update && <button onClick={cancelUpdate} className="w-20 rounded-md p-2 font-semibold bg-red-500 text-white">Cancel</button>
@@ -142,24 +143,28 @@ export default function CreateBlog() {
             <h1 className="text-center font-bold text-2xl">My Blogs</h1>
             <div className="flex flex-wrap justify-center gap-5 p-5 bg-gray-300 rounded-md">
             {
-              blogs.map((blog) => (
-                <div key={blog.id} className="flex flex-col gap-5 p-5 w-52 h-48 bg-zinc-100 rounded-md">
-                  <div className="flex justify-around items-center">
-                  <button onClick={() => handleUpdate(blog.id, blog.blog_content)} className="p-2 text-xl bg-purple-500 rounded-md">
-                    <MdOutlineModeEdit />
-                  </button>
-                  
-                  <button onClick={() => confirmDelete(blog.id)} className="p-2 text-xl bg-red-500 rounded-md">
-                    <MdDeleteOutline />
-                  </button>
+              blogs.map((blog) => {
+                const formattedDate = moment(blog.created_at).format("dddd, MMMM Do YYYY, h:mm:ss A");
+                return (
+                  <div key={blog.id} className="flex flex-col gap-5 p-5 w-[40%] h-[50%] bg-zinc-100 rounded-md">
+                    <div className="flex justify-evenly items-center">
+                      <button onClick={() => handleUpdate(blog.id, blog.blog_content)} className="p-2 text-xl bg-purple-500 rounded-md">
+                        <MdOutlineModeEdit />
+                      </button>
+                      
+                      <button onClick={() => confirmDelete(blog.id)} className="p-2 text-xl bg-red-500 rounded-md">
+                        <MdDeleteOutline />
+                      </button>
+                    </div>
+                    <p className="text-sm">Created at: {formattedDate}</p>
+                    <div 
+                      className="overflow-hidden text-ellipsis text-sm" 
+                      style={{ display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical' }} 
+                      dangerouslySetInnerHTML={{ __html: blog.blog_content }} 
+                    />
                   </div>
-                  <div 
-                    className="overflow-hidden text-ellipsis" 
-                    style={{ display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical' }} 
-                    dangerouslySetInnerHTML={{ __html: blog.blog_content }} 
-                  />
-                </div>
-              ))
+                )
+              })
             }
             </div>
           </div>

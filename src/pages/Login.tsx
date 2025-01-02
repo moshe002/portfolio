@@ -45,31 +45,32 @@ export default function Login() {
   };
 
   return (
-    <div className='flex flex-col items-center justify-center h-screen'>
+    <div className='flex flex-col items-center justify-center min-h-screen p-5'>
       <form
-        className='flex flex-col justify-center gap-5 p-5 w-[30%]' 
+        className='flex flex-col justify-center gap-5 p-5 w-full max-w-md bg-white shadow-md rounded-md' 
         onSubmit={(e) => handleSubmit(e)}>
-        <div className='flex justify-between items-center'>
-          <label htmlFor="email">Email:</label>
+        <div className='flex flex-col gap-2'>
+          <label htmlFor="email" className='text-sm font-medium'>Email:</label>
           <input 
             onChange={(e) => handleChange(e)}
             name='email'
             id='email' 
             type="email" 
-            className='p-1 border-2 rounded-md outline-none text-center'
+            className='p-2 border-2 rounded-md outline-none'
             required />
         </div>
-        <div className='flex justify-between relative items-center'>
+        <div className='flex flex-col gap-2 relative'>
           <label htmlFor="password">Password:</label>
           <input 
             onChange={(e) => handleChange(e)}
             id='password'
             name='password'
             type={showPassword ? 'text' : 'password'}
-            className='p-1 border-2 rounded-md outline-none text-center' 
+            className='p-2 border-2 rounded-md outline-none' 
             required />
           <button
-            className='absolute right-1 bottom-2 z-50 bg-white p-1 rounded-md'
+            type='button'
+            className='absolute right-2 top-11'
             title={showPassword ? 'Hide password' : 'Show password'} 
             onClick={() => {
               setShowPassword(prev => !prev)
@@ -84,7 +85,7 @@ export default function Login() {
         </div>
         <button type='submit' className='text-white font-semibold bg-green-400 rounded-md p-2'>LOGIN</button>
       </form>
-      <button onClick={() => navigate('/')} className='text-white font-semibold bg-blue-400 rounded-md p-2'>Back to portfolio site</button>
+      <button onClick={() => navigate('/')} className='text-white font-semibold bg-blue-400 rounded-md p-2 mt-5'>Back to portfolio site</button>
     </div>
   )
 }
