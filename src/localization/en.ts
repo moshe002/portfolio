@@ -20,7 +20,7 @@ export const en = {
         "about": "About",
         "skills": "Skills",
         "certificates": "Certificates",
-        "my_blog": "My Blog",
+        "my_blog": "Blog",
     },
     "projects" : {
         "projects_i_made": "Projects I Made",
