@@ -1,8 +1,9 @@
 import { useTheme } from "../context/themeContext";
 import { IoMdSchool } from "react-icons/io";
-import { MdOutlineDateRange, MdOutlineMailOutline  } from "react-icons/md";
+import { MdOutlineMailOutline  } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
-import { MdLocalPhone } from "react-icons/md";
+import { FaBirthdayCake } from "react-icons/fa";
+//import { MdLocalPhone } from "react-icons/md";
 import { en } from '../localization/en';
 import { useNavigate } from 'react-router-dom';
 
@@ -22,17 +23,17 @@ function Details() {
                         <h1>{en.details.school}</h1>
                     </li>
                     <li className="flex items-center gap-2 text-base">
-                        <h1><MdOutlineDateRange /></h1>
+                        <h1><FaBirthdayCake /></h1>
                         <h1>{en.details.birthday}</h1>
                     </li>
                     <li className="flex items-center gap-2 text-base">
                         <h1><IoLocationSharp /></h1>
                         <h1>{en.details.address}</h1>
                     </li>
-                    <li className="flex items-center gap-2 text-base">
+                    {/* <li className="flex items-center gap-2 text-base">
                         <h1><MdLocalPhone /></h1>
                         <h1 title="Globe">{en.details.cp_number}</h1>
-                    </li>       
+                    </li>        */}
                 </ul>
             </div>
             <div className={`p-3 rounded-md ${darkMode ? 'text-white' : 'text-black'} ${darkMode ? 'bg-gray-500' : 'bg-white'}`}>
@@ -42,10 +43,12 @@ function Details() {
                         <h1><MdOutlineMailOutline /></h1>
                         <p>{en.details.email}</p>
                     </li>
-                    <li className="flex items-center gap-2 text-base">
+
+                    {/* <li className="flex items-center gap-2 text-base">
                         <img className="w-5 h-5" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" alt="icon" loading="lazy" />
                         <a className="hover:text-blue-300" href="https://twitter.com/_mosheee" target="_blank" rel="noopener">{en.details.twitter}</a>
-                    </li>
+                    </li> */}
+                    
                     <li className="flex items-center gap-2 text-base">
                         <img className="w-5 h-5" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="icon" loading="lazy" />
                         <a className={`${darkMode ? 'hover:text-black' : 'hover:text-gray-500'}`} href="https://github.com/moshe002" target="_blank" rel="noopener">{en.details.github}</a>

@@ -5,16 +5,28 @@ import Shugyopedia from '../assets/shugyopedia.png'
 import AlbertosPic from '../assets/albertos1.png'
 import BisayadlePic from '../assets/bisayadle2.png'
 import WhatToPlay from '../assets/whatoplay2.png'
-import GithubProgress from '../assets/github-progress.png'
 import PrayBook from '../assets/praybooknew.png'
-import Harbest from '../assets/harbest.png'
 import rps from '../assets/rps.png'
 import Synonym from '../assets/synonym.png'
 import Weather from '../assets/weather.png'
 import PraybookMobile from '../assets/praybook_mobile.jpg'
 import Hangman from '../assets/hangman.jpg'
+import CebuJeepRoutes from '../assets/cebu-jeepney-routes.png'
 
 export const projects = [
+    {
+        "name": "Cebu Jeepney Routes",
+        "image": CebuJeepRoutes,
+        "description": "A webapp that lets you find jeepney routes in Cebu City.",
+        "techStack": [
+            "React.js",
+            "Tailwind",
+            "Material UI",
+            "Vite"
+        ],
+        "repository": "https://github.com/moshe002/cebu-jeep-routes",
+        "url": "https://cebu-jeep-routes.netlify.app/"
+    },
     {
         "name": "Karaokify",
         "image": Karaokify,
@@ -93,35 +105,6 @@ export const projects = [
         ],
         "repository": "https://github.com/moshe002/bisayadle",
         "url": "https://bisayadle.netlify.app/",
-    },
-    {
-        "name": "Github-Progress",
-        "image": GithubProgress,
-        "description": "Tracks your github progress for the year (like spotify wrapped).",    
-        "techStack": [
-            "TypeScript",
-            "Tailwind",
-            "React.js",
-            "Github API",
-            "Vite"
-        ],
-        "repository": "https://github.com/moshe002/github-progress",
-        "url": "https://github-progress.netlify.app/",
-    },
-    {
-        "name": "HarBest",
-        "image": Harbest,
-        "description": "A webapp for selling produce (veggies and fruits).",    
-        "techStack": [
-            "Email.js",
-            "TypeScript",
-            "React.js",
-            "Tailwind",
-            "Supabase",
-            "Vite"
-        ],
-        "repository": "https://github.com/moshe002/HarBest",
-        "url": "https://harbest.netlify.app/",
     },
     {
         "name": "PrayBook",

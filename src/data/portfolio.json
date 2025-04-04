@@ -1,0 +1,277 @@
+{
+    "personal_details": {
+        "full_name": "Moses Anthony Y. Fat",
+        "nicknames": ["Moshe", "Moi", "Ton-ton", "Anton"],
+        "height": "5'8",
+        "ethnicity": "Filipino",
+        "graduated_college": "University of Cebu Main Campus",
+        "birthday": "February 18, 2002",
+        "address": "Cebu City, Philippines"
+    },
+    "socials": {
+        "gmail": "mosesfat@gmail.com",
+        "github": ["moshe002", "https://github.com/moshe002"],
+        "linkedin": ["Moses Anthony Y. Fat", "https://www.linkedin.com/in/moses-anthony-fat-36962b261/"]
+    },
+    "projects": [
+        {
+            "name": "Cebu Jeepney Routes",
+            "description": "A webapp that lets you find jeepney routes in Cebu City.",
+            "techStack": [
+                "React.js",
+                "Tailwind",
+                "Material UI",
+                "Vite"
+            ],
+            "repository": "https://github.com/moshe002/cebu-jeep-routes",
+            "url": "https://cebu-jeep-routes.netlify.app/"
+        },
+        {
+            "name": "Karaokify",
+            "description": "A Karaoke webapp that lets you sing online.",    
+            "techStack": [
+                "React.js",
+                "TypeScript",
+                "Tailwind",
+                "Youtube API",
+                "Vite"
+            ],
+            "repository": "https://github.com/moshe002/karaokify",
+            "url": "https://karaokify.netlify.app/"
+        },
+        {
+            "name": "BisdaKids Mobile Game",
+            "description": "A capstone project aiming to solve the decline in bisaya proficiency.",    
+            "techStack": [
+                "Godot",
+                "GDScript",
+                "Supabase",
+                "PHP"
+            ],
+            "repository": "https://github.com/white-dough/Bisdakids",
+            "url": "https://drive.google.com/drive/folders/12iayquowvc2UiWVJbCvW26pQnY9XfNr9?usp=drive_link"
+        },
+        {
+            "name": "BisdaKids Admin Site",
+            "description": "The admin site for BisdaKids mobile game.",    
+            "techStack": [
+                "React.js",
+                "Tailwind",
+                "Supabase",
+                "Vite"
+            ],
+            "repository": "https://github.com/moshe002/BisdaKids-Admin-WebApp",
+            "url": ""
+        },
+        {
+            "name": "Shugyopedia",
+            "description": "A knowledge site webapp.",    
+            "techStack": [
+                "C#",
+                "ASP.NET Core",
+                "Bootstrap",
+                "CSS"
+            ],
+            "repository": "https://github.com/Chloiemarcoq/ShugyoPedia",
+            "url": ""
+        },
+        {
+            "name": "Albertos",
+            "description": "A website for Filipino Pizza franchise.",    
+            "techStack": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Mapbox API"
+            ],
+            "repository": "https://github.com/moshe002/albertos",
+            "url": "https://albertosph.netlify.app/"
+        },
+        {
+            "name": "Bisayadle",
+            "description": "Wordle clone but with Bisaya/Cebuano words.",    
+            "techStack": [
+                "TypeScript",
+                "Tailwind",
+                "React.js",
+                "Vite"
+            ],
+            "repository": "https://github.com/moshe002/bisayadle",
+            "url": "https://bisayadle.netlify.app/"
+        },
+        {
+            "name": "PrayBook",
+            "description": "Church booking Webapp for convenient mass and event bookings.",    
+            "techStack": [
+                "React.js",
+                "JavaScript",
+                "Tailwind",
+                "Firebase",
+                "Vite"
+            ],
+            "repository": "https://github.com/moshe002/churchbookingapp",
+            "url": "https://praybook-4b0a1.web.app/"
+        },
+        {
+            "name": "PrayBook Mobile App",
+            "description": "A mobile version of the PrayBook Webapp",    
+            "techStack": [
+                "React Native",
+                "Tailwind",
+                "JavaScript",
+                "Firebase"
+            ],
+            "repository": "https://github.com/moshe002/PrayBook-app-react-native",
+            "url": ""
+        },
+        {
+            "name": "What-to-play",
+            "description": "Web application to help you choose what to play.",    
+            "techStack": [
+                "React.js",
+                "JavaScript",
+                "CSS",
+                "FreeToGame API"
+            ],
+            "repository": "https://github.com/moshe002/what-to-play",
+            "url": "https://moshe002.github.io/what-to-play/"
+        },
+        {
+            "name": "Synonym-Webapp",
+            "description": "Let's you search the following synonyms of a word.",    
+            "techStack": [
+                "CSS",
+                "Vite",
+                "React.js",
+                "JavaScript",
+                "Dictionary API"
+            ],
+            "repository": "https://github.com/moshe002/synonym-webapp",
+            "url": "https://findthesynonym.netlify.app/"
+        },
+        {
+            "name": "Rock, Paper, Scissor",
+            "description": "A rock, paper, scissor game.",    
+            "techStack": [
+                "TypeScript",
+                "React.js",
+                "Tailwind",
+                "Vite"
+            ],
+            "repository": "https://github.com/moshe002/rock-paper-scissor",
+            "url": "https://rps-moi.netlify.app/"
+        },
+        {
+            "name": "Weather-Webapp",
+            "description": "Lets you find the weather conditions of a city.",    
+            "techStack": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "OpenWeatherMap API"
+            ],
+            "repository": "https://github.com/moshe002/weather-webapp",
+            "url": "https://moshe002.github.io/weather-webapp/"
+        },
+        {
+            "name": "HangMan",
+            "description": "A hangman mobile game.",    
+            "techStack": [
+                "Godot",
+                "GDScript"
+            ],
+            "repository": "https://github.com/moshe002/HangMan_GodotPractice",
+            "url": ""
+        }
+    ],
+    "skills": {
+        "technical_skills": [
+            "Computer Literate",
+            "Internet Literate",
+            "Basic Hardware Troubleshooting",
+            "Basic Software Troubleshooting",
+            "Basic MS Office Skills",
+            "80+ wpm"
+        ],
+        "soft_skills": [
+            "Understanding",
+            "Disciplined",
+            "Fast Learner",
+            "Good Time Management",
+            "Hardworking",
+            "Enthusiastic"
+        ],
+        "technologies_used": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "TypeScript",
+            "React.js",
+            "React Native",
+            "Godot",
+            "GDScript",
+            "C#",
+            ".NET",
+            "Laravel",
+            "SQL",
+            "Bootstrap",
+            "Tailwind",
+            "Supabase",
+            "Firebase",
+            "Vite",
+            "Vue.js",
+            "Visual Studio",
+            "Visual Studio Code",
+            "Git",
+            "GitHub",
+            "GitLab",
+            "Figma",
+            "Docker",
+            "Power Automate"
+        ]
+    },
+    "certificates": [
+        {
+            "freeCodeCamp": "Legacy JavaScript Algorithms and Data Structures"
+        },
+        {
+            "sololearn": "Tech for Everyone"
+        },
+        {
+            "HackerRank": "SQL (Basic)"
+        },
+        {
+            "sololearn": "Responsive Web Design course"
+        },
+        {
+            "sololearn": "React + Redux"
+        },
+        {
+            "sololearn": "Python for Beginners"
+        },
+        {
+            "sololearn": "jQuery course"
+        },
+        {
+            "sololearn": "JavaScript Intermediate"
+        },
+        {
+            "HackerRank": "JavaScript (Basic)"
+        },
+        {
+            "sololearn": "JavaScript"
+        },
+        {
+            "sololearn": "Introduction to C#"
+        },
+        {
+            "sololearn": "Introduction to SQL"
+        },
+        {
+            "sololearn": "C# Intermediate"
+        },
+        {
+            "HackerRank": "Problem Solving (Basic)"
+        }
+    ]
+}

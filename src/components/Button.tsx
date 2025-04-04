@@ -1,19 +1,19 @@
 import MyCV from '../assets/MosesFat_Resume.pdf'
 
 interface ButtonProps {
-    text: string,
+    icon: React.ReactNode,
     color: string
 }
 
-const Button = ({ text, color }: ButtonProps) => {
+const Button = ({ icon, color }: ButtonProps) => {
 
   return (
     <a 
       download={true}
       href={MyCV}
-      className={`mt-2 sm:mt-0 ${color} p-3 text-white rounded-md font-semibold text-center`} 
+      className={`w-12 mt-2 sm:mt-0 ${color} p-3 text-white rounded-full font-semibold text-center`} 
     >
-      {text}
+      {icon}
     </a>
   )
 }

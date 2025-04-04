@@ -1,9 +1,9 @@
 export const en = {
     "details" : {
         "personal_details": "Personal Details",
-        "school": "University of Cebu",
-        "birthday": "February, 18 2002",
-        "address": "Township, Poog, Toledo City, Cebu, Philippines",
+        "school": "University of Cebu Main Campus",
+        "birthday": "February 18",
+        "address": "Cebu City, Philippines",
         "cp_number": "0906 268 9710",
         "socials": "Socials",
         "email": "mosesfat@gmail.com",
@@ -14,7 +14,7 @@ export const en = {
     },
     "header" : {
         "fullname": "Moses Anthony Y. Fat",
-        "nicknames": "(Moshe, Moi, Anton, Moses)",
+        "nicknames": "(Moshe, Moi, Anton, Moses)"
     },
     "navbar" : {
         "about": "About",
