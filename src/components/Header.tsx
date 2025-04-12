@@ -49,7 +49,8 @@ const Header = ({ renderThis, setRenderThis }: HeaderProps) => {
         </div>
         <div className='flex flex-row sm:flex-col items-end gap-2 p-3'>
           <Button icon={<GrDocumentUser size={20} />} color="bg-green-500" />
-          <button 
+          <button
+            title="Display data in JSON format"
             onClick={handleDisplayJson} 
             id='display-json-btn' 
             className="w-12 mt-2 sm:mt-0 bg-blue-400 p-3 text-white rounded-full font-semibold text-center">
