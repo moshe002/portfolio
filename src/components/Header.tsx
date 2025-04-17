@@ -35,9 +35,9 @@ const Header = ({ renderThis, setRenderThis }: HeaderProps) => {
           <img 
             className={`border-4 ${darkMode ? 'border-white' : 'border-gray-300'} rounded-full w-28 h-28 sm:w-48 sm:h-48 z-50`} 
             src={
-              renderThis == 'About' ? '../../profile_photos/formal.jpg'
-              : renderThis == 'Skills' ? '../../profile_photos/profile_pic_fb.jpg' :
-              renderThis == 'Blog' ? '../../profile_photos/current_pp.jpg' : '../../profile_photos/profile-pic.jpg'
+              renderThis == 'About' ? '../../profile_photos/formal.webp'
+              : renderThis == 'Skills' ? '../../profile_photos/profile_pic_fb.webp' :
+              renderThis == 'Blog' ? '../../profile_photos/current_pp.webp' : '../../profile_photos/profile-pic.webp'
             } 
             alt="profile_pic" 
             loading='lazy'
