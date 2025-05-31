@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import { logout } from "../services/auth.service";
 import { useNavigate } from 'react-router-dom';
-import { createBlog, retrieveBlogs, updateBlog } from "../services/blogs.service";
+import { 
+  createBlog, 
+  retrieveBlogs, 
+  updateBlog } from "../services/blogs.service";
+import { retrieveStorageData } from "../services/storage.services";  
 import Editor, { ContentEditableEvent } from 'react-simple-wysiwyg';
 import { MdDeleteOutline } from "react-icons/md";
 import { MdOutlineModeEdit } from "react-icons/md";
@@ -34,6 +38,7 @@ export default function CreateBlog() {
 
   useEffect(() => {
     fetchBlogs();
+    retrieveStorageData();
   }, []);
 
   const fetchBlogs = async () => {
@@ -103,6 +108,10 @@ export default function CreateBlog() {
     setIdToDelete(id);
     setShowDeleteModal(true)
   };
+
+  const handleSubmitContent = () => {
+    console.log("Content submitted");
+  };
     
   return (
     <>
@@ -122,22 +131,43 @@ export default function CreateBlog() {
           </button>
         </div>
         <div>
-          <div className="flex flex-col items-center gap-5 p-5 mt-10">
-            <Editor
-              placeholder="Write your blog here..."
-              containerProps={{ style: { resize: 'vertical', height: '400px', width: '80vw', overflow: 'auto' } }} 
-              value={update ? updateContent.content : editorValue} 
-              onChange={(e) => handleEditorChange(e)}
-            />
-            {
-              update && <button onClick={cancelUpdate} className="w-20 rounded-md p-2 font-semibold bg-red-500 text-white">Cancel</button>
-            }
-            <button
-              disabled={editorValue.length === 0} 
-              onClick={submitBlog} 
-              className={`w-20 rounded-md p-2 font-semibold bg-green-400 text-white ${editorValue.length === 0 ? 'cursor-not-allowed' : 'cursor-pointer'}`}>
-                {update ? 'Update' : 'Submit'}
-            </button>
+          <div className="flex flex-row items-center gap-1 p-5 mt-10 border-2 border-red-500">
+            {/* section for uploading blogs and text contents */}
+            <section className="flex flex-col items-center gap-5">
+              <Editor
+                placeholder="Write your blog here..."
+                containerProps={{ style: { resize: 'vertical', height: '400px', width: '50vw', overflow: 'auto' } }} 
+                value={update ? updateContent.content : editorValue} 
+                onChange={(e) => handleEditorChange(e)}
+              />
+              {
+                update && <button onClick={cancelUpdate} className="w-20 rounded-md p-2 font-semibold bg-red-500 text-white">Cancel</button>
+              }
+              <button
+                disabled={editorValue.length === 0} 
+                onClick={submitBlog} 
+                className={`w-20 rounded-md p-2 font-semibold bg-green-400 text-white ${editorValue.length === 0 ? 'cursor-not-allowed' : 'cursor-pointer'}`}>
+                  {update ? 'Update' : 'Submit'}
+              </button>
+            </section>
+            {/* section for uploading content (images) */}
+            <section className="flex flex-col justify-between h-[70vh] w-full border-2 border-blue-400 p-3">
+              <form className="flex flex-col items-center gap-5" onSubmit={handleSubmitContent}>
+                <div className="">
+                  <label className="" htmlFor="content-image">Picture here:</label>
+                  <input 
+                    type="file" 
+                    accept=".png,.jpg,.jpeg,.gif,.mp4,.mov,.avi,.webm,.mkv,image/*,video/*" 
+                    name="content-image" 
+                    id="content-image" 
+                  />
+                </div>
+                <button className="w-32 rounded-md p-2 font-semibold bg-green-400 text-white" type="submit">Upload picture</button>
+              </form>
+              <div className="text-center">
+                <p className="text-2xl font-bold text-gray-400 opacity-50">Image preview here</p>
+              </div>
+            </section>
           </div>
           <div className="flex flex-col gap-5 w-screen mt-10">
             <h1 className="text-center font-bold text-2xl">My Blogs</h1>
