@@ -10,7 +10,7 @@ function ExperienceSection() {
       <div className="flex flex-col items-center">
         <div className="flex flex-wrap justify-evenly gap-4 mt-3">
           {
-            certificates.map((certificate, index) => {
+            [...certificates].reverse().map((certificate, index) => {
               return (
                 <div className={`${darkMode ? 'bg-gray-500' : 'bg-white'} p-3 rounded-md`} key={index}>
                   <img 
