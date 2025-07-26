@@ -9,14 +9,14 @@ function Projects() {
     const { darkMode } = useTheme()
 
   return (
-    <div className={`flex flex-col h-screen relative gap-3 w-full sm:w-[65%] px-3 pb-3 rounded-md ${darkMode ? 'bg-zinc-600' : 'bg-zinc-100'}  overflow-y-auto`}>
-        <div className={`${darkMode ? 'bg-zinc-600' : 'bg-zinc-100'} sticky top-0 pt-3 pb-1`}>
+    <div className={`flex flex-col h-screen relative gap-3 w-full sm:w-[65%] px-3 pb-3 rounded-md ${darkMode ? 'bg-zinc-700' : 'bg-zinc-100'}  overflow-y-auto`}>
+        <div className={`${darkMode ? 'bg-zinc-700' : 'bg-zinc-100'} sticky top-0 pt-3 pb-1`}>
             <h1 className={`font-bold ${darkMode ? 'text-white' : 'text-black'} text-xl`}>{en.projects.projects_i_made}</h1>
         </div>
         {
             projects.map((project, index) => {
                 return (
-                    <div className={`flex flex-col gap-3 p-3 ${darkMode ? 'text-white' : 'text-black'} ${darkMode ? 'bg-gray-500' : 'bg-white'}  rounded-md`} key={index}>
+                    <div className={`flex flex-col gap-3 p-3 ${darkMode ? 'text-white' : 'text-black'} ${darkMode ? 'bg-gray-600' : 'bg-white'}  rounded-md`} key={index}>
                         <h1 className="font-bold text-3xl">{project.name}</h1>
                         <p>{project.description}</p>
                         <img className='h-auto w-auto rounded-md border-2' src={project.image} alt="project_img" loading="lazy" />

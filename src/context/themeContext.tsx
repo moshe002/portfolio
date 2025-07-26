@@ -1,27 +1,3 @@
-// import { createContext, useState } from 'react'
-
-// interface DarkModeContextProps {
-//     darkMode: boolean
-//     toggleDarkMode: () => void
-// }
-
-// const DarkModeContext = createContext<DarkModeContextProps | undefined>(undefined)
-
-// const DarkModeProvider = (props:any) => {
-//     const [darkMode, setDarkMode] = useState(false)
-    
-//     const toggleDarkMode = () => setDarkMode(!darkMode)
-//     return (
-//         <div>
-//             <DarkModeContext.Provider value={{darkMode, toggleDarkMode }}>
-//                 {props.children}
-//             </DarkModeContext.Provider>
-//         </div>
-//     ) 
-// }
-
-// export {DarkModeContext, DarkModeProvider}
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 interface ThemeContextProps {

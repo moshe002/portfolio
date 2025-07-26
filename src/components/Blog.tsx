@@ -32,7 +32,7 @@ export default function Blog() {
   };
 
   return (
-    <div className={`flex flex-col gap-5 p-5 w-full h-max ${darkMode ? 'bg-zinc-600 text-white' : 'bg-zinc-100 text-black'} rounded-md`}>
+    <div className={`flex flex-col gap-5 p-5 w-full h-max ${darkMode ? 'bg-zinc-700 text-white' : 'bg-zinc-100 text-black'} rounded-md`}>
       <div className="flex items-center justify-end mb-4">
         <label htmlFor="filter" className="mr-2 text-sm text-center">Sort by:</label>
         <select onChange={(e) => handleSort(e)} name="sort" id="sort" className="p-2 border rounded-md">
@@ -55,7 +55,7 @@ export default function Blog() {
             return (
                 <div key={blog.id} className='flex flex-col gap-2'>
                 <h1 className="text-lg font-semibold">{formattedDate}</h1>
-                <div className={`border-2 ${darkMode ? 'bg-gray-500' : 'bg-white'} p-5 rounded-md`}>
+                <div className={`border-2 ${darkMode ? 'bg-gray-600' : 'bg-white'} p-5 rounded-md`}>
                   <div dangerouslySetInnerHTML={{ __html: blog.blog_content }} />
                 </div>
               </div>

@@ -28,7 +28,7 @@ const Header = ({ renderThis, setRenderThis }: HeaderProps) => {
   };
 
   return (
-    <div className={`flex flex-col items-center h-[85%] ${darkMode ? 'bg-zinc-600' : 'bg-zinc-100'}`}>
+    <div className={`flex flex-col items-center h-[85%] ${darkMode ? 'bg-zinc-700' : 'bg-zinc-100'}`}>
       <CoverPicture renderThis={renderThis} />
       <div className="flex flex-col sm:flex-row justify-between items-center w-[70%] h-auto px-3">
         <div className="flex flex-col sm:flex-row items-center gap-0 sm:gap-5 px-5 -mt-10 sm:-mt-14">

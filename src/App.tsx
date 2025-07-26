@@ -10,7 +10,7 @@ function App() {
   const { darkMode } = useTheme()
 
   return (
-    <div className={`${darkMode ? 'bg-gray-500' : 'bg-white'}`}>
+    <div className={`${darkMode ? 'bg-gray-600' : 'bg-white'}`}>
       <Header renderThis={renderThis} setRenderThis={setRenderThis} />
       <Body renderThis={renderThis} />
     </div>

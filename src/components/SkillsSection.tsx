@@ -8,9 +8,9 @@ function SkillsSection() {
   const { darkMode } = useTheme();
 
   return (
-    <div className={`flex flex-col gap-5 p-5 w-full h-max ${darkMode ? 'bg-zinc-600' : 'bg-zinc-100'} rounded-md`}>
+    <div className={`flex flex-col gap-5 p-5 w-full h-max ${darkMode ? 'bg-zinc-700' : 'bg-zinc-100'} rounded-md`}>
       <div className="flex flex-col sm:flex-row gap-10">
-        <div className={`flex flex-col gap-3 p-3 w-full ${darkMode ? 'text-white' : 'text-black'} ${darkMode ? 'bg-gray-500' : 'bg-white'} rounded-md`}>
+        <div className={`flex flex-col gap-3 p-3 w-full ${darkMode ? 'text-white' : 'text-black'} ${darkMode ? 'bg-gray-600' : 'bg-white'} rounded-md`}>
           <h1 className="font-bold text-2xl">{en.skill_section.technical_skills}</h1>
             <ul className="list-disc list-inside">
               {
@@ -22,7 +22,7 @@ function SkillsSection() {
               }
             </ul>
         </div>
-        <div className={`flex flex-col gap-3 p-3 w-full ${darkMode ? 'text-white' : 'text-black'} ${darkMode ? 'bg-gray-500' : 'bg-white'} rounded-md`}>
+        <div className={`flex flex-col gap-3 p-3 w-full ${darkMode ? 'text-white' : 'text-black'} ${darkMode ? 'bg-gray-600' : 'bg-white'} rounded-md`}>
           <h1 className="font-bold text-2xl">{en.skill_section.soft_skills}</h1>
             <ul className="list-disc list-inside">
               {
@@ -35,7 +35,7 @@ function SkillsSection() {
             </ul>
         </div>
       </div>
-      <div className={`flex flex-col text-center py-3 gap-3 w-full ${darkMode ? 'text-white' : 'text-black'} ${darkMode ? 'bg-gray-500' : 'bg-white'} rounded-md`}>
+      <div className={`flex flex-col text-center py-3 gap-3 w-full ${darkMode ? 'text-white' : 'text-black'} ${darkMode ? 'bg-gray-600' : 'bg-white'} rounded-md`}>
         <h1 className="font-bold text-sm sm:text-2xl">{en.skill_section.technologies_prog_lang_used}</h1>
         <div className="flex flex-wrap gap-5 justify-center">       
         {

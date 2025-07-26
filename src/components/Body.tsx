@@ -1,15 +1,13 @@
 import AboutSection from "./AboutSection"
 import SkillsSection from "./SkillsSection"
 import CertificatesSection from "./Certificates"
-import Blog from "./Blog";
+// import Blog from "./Blog";
 
 type BodyProps = {
   renderThis: string;
 }
 
 const Body = ({ renderThis } : BodyProps) => {
-
-  //console.log(renderThis)
 
   const RenderSection = (section:string) => {
     switch(section) {
@@ -19,8 +17,10 @@ const Body = ({ renderThis } : BodyProps) => {
         return <SkillsSection />
       case "Experience":
         return <CertificatesSection />
-      case "Blog":
-        return <Blog />
+      // case "Blog":
+      //   return <Blog />
+      default:
+        console.error(`Unknown section: ${section}`);
     }
   } 
 
