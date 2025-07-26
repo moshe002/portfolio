@@ -37,13 +37,6 @@ const Navbar = ({ renderThis, setRenderThis } : NavbarProps) => {
             >
               {en.navbar.certificates}
             </button>
-            <button 
-              onClick={() => renderThisSection('Blog')} 
-              className={`${renderThis == 'Blog' ? 'text-black' : ''} ${renderThis == 'Blog' ? 'bg-gray-300' : ''} p-3 font-semibold hover:bg-gray-300 rounded-md duration-150`}
-              type="button"
-            >
-              {en.navbar.my_blog}
-            </button>
         </div>
         <DarkDayButton />
     </div>
