@@ -13,5 +13,6 @@ export const certificates = [
     '../../certificates/Intro SQL Certificate.webp',
     '../../certificates/csharpintermediate.webp',
     '../../certificates/Basic Problem Solving Certificate.webp',
-    '../../certificates/HTMLFundamentals_certificate.webp'
+    '../../certificates/HTMLFundamentals_certificate.webp',
+    '../../certificates/aws_cloud_practitioner_essentials_certificate.webp'
 ];
