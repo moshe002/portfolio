@@ -1,4 +1,4 @@
-import MyCV from '../assets/resume_moses_anthony_fat.pdf'
+import MyCV from '../assets/mosesfat_resume.pdf'
 
 interface ButtonProps {
     icon: React.ReactNode,
