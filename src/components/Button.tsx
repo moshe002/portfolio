@@ -12,9 +12,9 @@ const Button = ({ icon, color }: ButtonProps) => {
       title="Download CV/Resume"
       download={true}
       href={MyCV}
-      className={`w-12 mt-2 sm:mt-0 ${color} p-3 text-white rounded-full font-semibold text-center`} 
+      className={`flex justify-around items-center w-40 mt-2 sm:mt-0 ${color} p-3 text-white rounded-full font-semibold text-center`} 
     >
-      {icon}
+      <span>{icon}</span> Download CV
     </a>
   )
 }

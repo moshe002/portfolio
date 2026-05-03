@@ -1,19 +1,16 @@
-type CoverPhotoProps = {
-  renderThis: string;
-}
+// type CoverPhotoProps = {
+//   renderThis: string;
+// }
 
-function CoverPhoto({ renderThis }:CoverPhotoProps) {
+// { renderThis }:CoverPhotoProps
+function CoverPhoto() {
 
   return (
     <div className='w-[70%]'>
       <img 
-        className={`${renderThis == 'Blog' ? 'bg-gray-300' : ''} w-[100%] h-64 object-scale-down sm:object-cover rounded-md`} 
-        src={
-          renderThis == 'About' ? '../../cover_photos/cover-photo.webp' :
-          renderThis == 'Skills' ? '../../cover_photos/minecraft.webp' : 
-          renderThis == 'Blog' ? '' : '../../cover_photos/capstone_team_cropped.webp'
-        } 
-        alt={`${renderThis == 'Blog' ? '' : 'cover_photo'}`} 
+        className={`w-[100%] h-64 object-scale-down sm:object-cover rounded-md`} 
+        src={'../../cover_photos/minecraft.webp'} 
+        alt={'cover_photo'} 
         loading='lazy'
       />
     </div>

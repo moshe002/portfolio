@@ -14,8 +14,8 @@ function Details() {
     // const navigate = useNavigate();
 
     return (
-        <div className={`flex flex-col gap-3 w-full sm:w-[35%] h-max p-3 rounded-md ${darkMode ? 'bg-zinc-700' : 'bg-zinc-100'} overflow-hidden`}>
-            <div className={`p-3 rounded-md ${darkMode ? 'text-white' : 'text-black'} ${darkMode ? 'bg-gray-600' : 'bg-white'}`}>
+        <div className={`flex flex-col gap-3 w-full sm:w-[35%] h-max p-3 rounded-md ${darkMode ? 'bg-zinc-800' : 'bg-zinc-100'} overflow-hidden`}>
+            <div className={`p-3 rounded-md ${darkMode ? 'text-white' : 'text-black'} ${darkMode ? 'bg-gray-900' : 'bg-white'}`}>
                 <h1 className="font-bold text-xl">{en.details.personal_details}</h1>
                 <ul className="flex flex-col gap-3 mt-5">
                     <li className="flex items-center gap-2 text-base">
@@ -36,7 +36,7 @@ function Details() {
                     </li>        */}
                 </ul>
             </div>
-            <div className={`p-3 rounded-md ${darkMode ? 'text-white' : 'text-black'} ${darkMode ? 'bg-gray-600' : 'bg-white'}`}>
+            <div className={`p-3 rounded-md ${darkMode ? 'text-white' : 'text-black'} ${darkMode ? 'bg-gray-900' : 'bg-white'}`}>
                 <h1 className="font-bold text-xl">{en.details.socials}</h1>
                 <ul className="flex flex-col gap-3 mt-5">
                     <li className="flex items-center gap-2 text-base">
