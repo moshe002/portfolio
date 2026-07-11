@@ -7,12 +7,12 @@ export const softAndTechnicalSkills = [
         'Basic MS Office Skills',
         '80+ wpm',
     ],
-    [
-        'Understanding',
-        'Disciplined',
-        'Fast Learner',
-        'Good Time Management',
-        'Hardworking',
-        'Enthusiastic',
-    ]
+    // [
+    //     'Understanding',
+    //     'Disciplined',
+    //     'Fast Learner',
+    //     'Good Time Management',
+    //     'Hardworking',
+    //     'Enthusiastic',
+    // ]
 ];
