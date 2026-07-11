@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { useTheme } from "../context/themeContext";
 import { skills } from "../data/skills";
-// import { softAndTechnicalSkills } from "../data/softAndTechnicalSkills";
-import { en } from "../localization/en";
 
 type Skills = {
   name: string,
