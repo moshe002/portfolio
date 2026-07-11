@@ -2,7 +2,7 @@ export const en = {
     "details" : {
         "personal_details": "Personal Details",
         "school": "University of Cebu Main Campus",
-        "birthday": "February 18",
+        "birthday": "February 18, 2002",
         "address": "Cebu City, Philippines",
         "cp_number": "0906 268 9710",
         "socials": "Socials",
@@ -10,6 +10,7 @@ export const en = {
         "twitter": "Twitter",
         "github": "Github",
         "linkedIn": "LinkedIn",
+        "codewars": "Codewars",
         "rights": "All rights reserved",
     },
     "header" : {
@@ -20,7 +21,6 @@ export const en = {
         "about": "About",
         "skills": "Skills",
         "certificates": "Certificates",
-        "my_blog": "Blog",
     },
     "projects" : {
         "projects_i_made": "Projects I Made",
