@@ -12,8 +12,26 @@ import Weather from '../assets/weather.webp'
 import PraybookMobile from '../assets/praybook_mobile.webp'
 import Hangman from '../assets/hangman.webp'
 import CebuJeepRoutes from '../assets/cebu-jeepney-routes.webp'
+import FakeStoreApi from '../assets/fakestore.webp'
 
 export const projects = [
+    {
+        "name": "Fake Store Web API",
+        "image": FakeStoreApi,
+        "description": "A .NET Web API simulating a Store application. Having Products, Carts and Users.",
+        "techStack": [
+            "C#",
+            ".NET Web API",
+            "Entity Framework",
+            "Swagger",
+            "Xunit",
+            "Docker",
+            "SQLite",
+            "FakeStore API"
+        ] ,
+        "repository": "https://github.com/moshe002/fakestore-webapi",
+        "url": "" 
+    },
     {
         "name": "Cebu Jeepney Routes",
         "image": CebuJeepRoutes,
