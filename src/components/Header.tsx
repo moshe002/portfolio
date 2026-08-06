@@ -20,7 +20,7 @@ const Header = ({ renderThis, setRenderThis }: HeaderProps) => {
         <div className="flex flex-col sm:flex-row items-center gap-0 sm:gap-5 px-5 -mt-10 sm:-mt-14">
           <img 
             className={`border-4 ${darkMode ? 'border-white' : 'border-gray-300'} rounded-full w-28 h-28 sm:w-48 sm:h-48 z-50`} 
-            src={'../../profile_photos/grad-pic.webp'} 
+            src={'../../profile_photos/ako2.webp'} 
             alt="profile_pic" 
             loading='lazy'
           />
