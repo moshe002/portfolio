@@ -12,7 +12,7 @@ function Details() {
 
     return (
         <div className={`flex flex-col gap-3 w-full sm:w-[35%] h-max p-3 rounded-md ${darkMode ? 'bg-zinc-800' : 'bg-zinc-100'} overflow-hidden`}>
-            <div className={`p-3 rounded-md ${darkMode ? 'text-white' : 'text-black'} ${darkMode ? 'bg-gray-900' : 'bg-white'}`}>
+            <div className={`p-3 rounded-md ${darkMode ? 'text-gray-400' : 'text-black'} ${darkMode ? 'bg-zinc-900' : 'bg-white'}`}>
                 <h1 className="font-bold text-xl">{en.details.personal_details}</h1>
                 <ul className="flex flex-col gap-3 mt-5">
                     <li className="flex items-center gap-2 text-base">
@@ -29,16 +29,18 @@ function Details() {
                     </li>
                 </ul>
             </div>
-            <div className={`p-3 rounded-md ${darkMode ? 'text-white' : 'text-black'} ${darkMode ? 'bg-gray-900' : 'bg-white'}`}>
+            <div className={`p-3 rounded-md ${darkMode ? 'text-gray-400' : 'text-black'} ${darkMode ? 'bg-zinc-900' : 'bg-white'}`}>
                 <h1 className="font-bold text-xl">{en.details.socials}</h1>
                 <ul className="flex flex-col gap-3 mt-5">
                     <li className="flex items-center gap-2 text-base">
                         <h1><MdOutlineMailOutline /></h1>
-                        <p className="break-all">{en.details.email}</p>
+                        <a href={`mailto:${en.details.email}`} className="break-all hover:text-gray-500">
+                            {en.details.email}
+                        </a>
                     </li>
                     <li className="flex items-center gap-2 text-base">
                         <img className="w-5 h-5" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="icon" loading="lazy" />
-                        <a className={`${darkMode ? 'hover:text-black' : 'hover:text-gray-500'}`} href="https://github.com/moshe002" target="_blank" rel="noopener">{en.details.github}</a>
+                        <a className="hover:text-gray-500" href="https://github.com/moshe002" target="_blank" rel="noopener">{en.details.github}</a>
                     </li>
                     <li className="flex items-center gap-2 text-base">
                         <img className="w-5 h-5" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" alt="icon" loading="lazy" />

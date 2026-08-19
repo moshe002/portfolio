@@ -3,6 +3,7 @@ import { useTheme } from "../context/themeContext";
 import { RiGitRepositoryCommitsLine } from "react-icons/ri";
 import { projects } from "../data/projects";
 import { en } from "../localization/en";
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 
 function Projects() {
 
@@ -11,15 +12,19 @@ function Projects() {
   return (
     <div className={`flex flex-col h-screen relative gap-3 w-full sm:w-[65%] px-3 pb-3 rounded-md ${darkMode ? 'bg-zinc-800' : 'bg-zinc-100'}  overflow-y-auto`}>
         <div className={`${darkMode ? 'bg-zinc-800' : 'bg-zinc-100'} sticky top-0 pt-3 pb-1`}>
-            <h1 className={`font-bold ${darkMode ? 'text-white' : 'text-black'} text-xl`}>{en.projects.projects_i_made}</h1>
+            <h1 className={`font-bold ${darkMode ? 'text-gray-400' : 'text-black'} text-xl`}>{en.projects.projects_i_made}</h1>
         </div>
         {
             projects.map((project, index) => {
                 return (
-                    <div className={`flex flex-col gap-3 p-3 ${darkMode ? 'text-white' : 'text-black'} ${darkMode ? 'bg-gray-900' : 'bg-white'}  rounded-md`} key={index}>
+                    <div className={`flex flex-col gap-3 p-3 ${darkMode ? 'text-gray-400' : 'text-black'} ${darkMode ? 'bg-zinc-900' : 'bg-white'}  rounded-md`} key={index}>
                         <h1 className="font-bold text-3xl">{project.name}</h1>
                         <p>{project.description}</p>
-                        <img className='h-auto w-auto rounded-md border-2' src={project.image} alt="project_img" loading="lazy" />
+                        <PhotoProvider maskOpacity={0.5}>
+                            <PhotoView src={project.image}>
+                                <img className='h-auto w-auto rounded-md border-2' src={project.image} alt="project_img" loading="lazy" />
+                            </PhotoView>
+                        </PhotoProvider>
                         <p className="text-lg font-mono"><span className="font-bold font-sans">{en.projects.techstack}</span> {project.techStack.join(', ')}</p>
                         {
                             project.url === "" ? 

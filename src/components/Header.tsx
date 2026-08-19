@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import CoverPicture from "./CoverPhoto";
 import { MdDownload } from "react-icons/md";
 import { en } from '../localization/en';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
  
 type HeaderProps = {
   renderThis: string;
@@ -18,15 +19,19 @@ const Header = ({ renderThis, setRenderThis }: HeaderProps) => {
       <CoverPicture />
       <div className="flex flex-col md:flex-row justify-between items-center w-[70%] h-auto px-3">
         <div className="flex flex-col sm:flex-row items-center gap-0 sm:gap-5 px-5 -mt-10 sm:-mt-14">
-          <img 
-            className={`border-4 ${darkMode ? 'border-white' : 'border-gray-300'} rounded-full w-28 h-28 sm:w-48 sm:h-48 z-50`} 
-            src={'../../profile_photos/ako2.webp'} 
-            alt="profile_pic" 
-            loading='lazy'
-          />
+          <PhotoProvider maskOpacity={0.5}>
+            <PhotoView src={'../../profile_photos/ako2.webp'}>
+              <img 
+                className={`border-4 ${darkMode ? 'border-gray-500' : 'border-gray-300'} rounded-full w-28 h-28 sm:w-48 sm:h-48 z-50`} 
+                src='../../profile_photos/ako2.webp'
+                alt="profile_pic" 
+                loading='lazy'
+              />
+            </PhotoView>
+          </PhotoProvider>
           <div className='flex flex-col gap-1 text-center'>
-            <h1 className={`${darkMode ? 'text-white' : 'text-black'} text-center text-base sm:text-3xl font-semibold sm:mt-14`}>{en.header.fullname}</h1>     
-            <p title='My nicknames' className={`${darkMode ? 'text-white' : 'text-black'} italic text-xs sm:text-sm`}>{en.header.nicknames}</p>       
+            <h1 className={`${darkMode ? 'text-gray-400' : 'text-black'} text-center text-base sm:text-3xl font-semibold sm:mt-14`}>{en.header.fullname}</h1>     
+            <p title='My nicknames' className={`${darkMode ? 'text-gray-400' : 'text-black'} italic text-xs sm:text-sm`}>{en.header.nicknames}</p>       
           </div>
         </div>
         <div className='flex flex-row sm:flex-col items-end gap-2 p-3'>
