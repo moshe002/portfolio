@@ -20,7 +20,7 @@ function SkillsSection() {
 
   return (
     <div className={`flex flex-col gap-5 p-5 w-full h-max ${darkMode ? 'bg-zinc-800' : 'bg-zinc-100'} rounded-md`}>
-      <div className={`flex flex-col gap-5 ${darkMode ? 'text-white' : 'text-black'} sm:flex-row gap-5`}>
+      <div className={`flex flex-col gap-5 ${darkMode ? 'text-gray-400' : 'text-black'} sm:flex-row gap-5`}>
         {
           Object.keys(skills).map((key, i) => {
             return (
@@ -34,7 +34,7 @@ function SkillsSection() {
           })
         }
       </div>
-      <div className={`flex flex-wrap gap-5 justify-center ${darkMode ? 'text-white bg-gray-900' : 'text-black bg-white'} rounded-md`}>
+      <div className={`flex flex-wrap gap-5 justify-center ${darkMode ? 'text-gray-400 bg-zinc-900' : 'text-black bg-white'} rounded-md`}>
         {
           skill.map((val, i) => {
             return (
@@ -46,21 +46,6 @@ function SkillsSection() {
           })
         }
       </div>
-      {/* <div className={`flex flex-col text-center py-3 gap-3 w-full ${darkMode ? 'text-white' : 'text-black'} ${darkMode ? 'bg-gray-900' : 'bg-white'} rounded-md`}>
-        <h1 className="font-bold text-sm sm:text-2xl">{en.skill_section.technologies_prog_lang_used}</h1>
-        <div className="flex flex-wrap gap-5 justify-center">       
-        {
-          languages.map((language, index) => {
-            return(
-              <div className="flex flex-col items-center p-5" key={index}>
-                <img className="w-20 h-20" src={language.icon} alt="icon" loading="lazy" />
-                <h1 className="font-semibold text-lg">{language.name}</h1>
-              </div>
-            )
-          })
-        }
-        </div>
-      </div> */}
     </div>
   )
 }
