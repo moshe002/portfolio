@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTheme } from "../context/themeContext";
 import { skills } from "../data/skills";
+import { GridLoader } from "react-spinners";
 
 type Skills = {
   name: string,
@@ -11,7 +12,18 @@ function SkillsSection() {
 
   const [skill, setSkill] = useState<Skills[]>(skills.Languages);
   const [selectedSkill, setSelectedSkill] = useState<string>('Languages');
+  const [loading, setLoading] = useState<boolean>(true);
   const { darkMode } = useTheme();
+
+  useEffect(() => {
+    const loadingTimeout = setTimeout(() => {
+      setLoading(false);
+    }, 900);
+
+    return () => {
+      clearTimeout(loadingTimeout);
+    };
+  }, []);
 
   const onSelectSkills = (skill: string) => {
     setSelectedSkill(skill);
@@ -39,8 +51,14 @@ function SkillsSection() {
           skill.map((val, i) => {
             return (
               <div key={i} className="flex flex-col items-center p-5">
-                <img src={val.icon} className="w-20 h-20" alt={val.name} loading="lazy" />
-                <h1 className="font-semibold text-lg text-center">{val.name}</h1>
+                {loading ? (<GridLoader color={darkMode ? 'gray' : 'lightgray'} size={22} />)
+                : (
+                    <>
+                      <img src={val.icon} className="w-20 h-20" alt={val.name} loading="lazy" />
+                      <h1 className="font-semibold text-lg text-center">{val.name}</h1>
+                    </>
+                  )
+                }
               </div>
             )
           })

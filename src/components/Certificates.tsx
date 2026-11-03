@@ -1,10 +1,24 @@
+import { useState, useEffect } from "react";
 import { useTheme } from "../context/themeContext";
 import { certificates } from "../data/certificates";
 import { PhotoProvider, PhotoView } from 'react-photo-view';
+import { SquareLoader } from "react-spinners";
 
 function ExperienceSection() {
   
   const { darkMode } = useTheme()
+
+  const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    const loadingTimeout = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => {
+      clearTimeout(loadingTimeout);
+    };
+  }, []);
     
   return (
     <div className={`flex flex-col gap-5 p-5 w-full h-full ${darkMode ? 'bg-zinc-800' : 'bg-zinc-100'} rounded-md`}>
@@ -15,14 +29,19 @@ function ExperienceSection() {
               [...certificates].reverse().map((certificate, index) => {
                 return (
                   <div className={`${darkMode ? 'bg-zinc-900' : 'bg-white'} p-3 rounded-md`} key={index}>
-                    <PhotoView src={certificate}>
-                      <img 
-                        className={`hover:scale-125 duration-150 ${darkMode ? '' : 'border-2 border-gray-300'} sm:w-[85] sm:h-60 rounded-md`} 
-                        src={certificate} 
-                        alt={certificate} 
-                        loading="lazy"
-                      />
-                    </PhotoView>
+                    {
+                      loading ? (<SquareLoader color={darkMode ? 'gray' : 'lightgray'} size={180} />)
+                      : (
+                        <PhotoView src={certificate}>
+                          <img 
+                            className={`hover:scale-125 duration-150 ${darkMode ? '' : 'border-2 border-gray-300'} sm:w-[85] sm:h-60 rounded-md`} 
+                            src={certificate} 
+                            alt={certificate} 
+                            loading="lazy"
+                          />
+                        </PhotoView>
+                      )
+                    }
                   </div>
                 )
               })
