@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
+import { isDayOrNight } from '../util/isDayOrNight';
 
 interface ThemeContextProps {
   darkMode: boolean;
@@ -12,7 +13,7 @@ interface ThemeProviderProps {
 }
 
 const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(isDayOrNight());
 
   const toggleDarkMode = () => setDarkMode((prevMode) => !prevMode);
 
