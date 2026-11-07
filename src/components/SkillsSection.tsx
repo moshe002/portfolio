@@ -50,15 +50,16 @@ function SkillsSection() {
         {
           skill.map((val, i) => {
             return (
-              <div key={i} className="flex flex-col items-center p-5">
-                {loading ? (<GridLoader color={darkMode ? 'gray' : 'lightgray'} size={22} />)
-                : (
-                    <>
-                      <img src={val.icon} className="w-20 h-20" alt={val.name} loading="lazy" />
-                      <h1 className="font-semibold text-lg text-center">{val.name}</h1>
-                    </>
-                  )
-                }
+              <div key={i} className="flex flex-col items-center p-5 relative">
+                <>
+                  {loading && (
+                    <div className={`absolute inset-0 z-10 flex items-center justify-center`}>
+                      <GridLoader color={darkMode ? 'gray' : 'lightgray'} size={22} />
+                    </div>
+                  )}
+                  <img src={val.icon} className={`w-20 h-20 ${loading ? 'opacity-0' : 'opacity-100'}`} alt={val.name} loading="lazy" />
+                  <h1 className={`font-semibold text-lg text-center ${loading ? 'opacity-0' : 'opacity-100'}`}>{val.name}</h1>
+                </>
               </div>
             )
           })

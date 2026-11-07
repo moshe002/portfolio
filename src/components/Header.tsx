@@ -5,6 +5,7 @@ import CoverPicture from "./CoverPhoto";
 import { MdDownload } from "react-icons/md";
 import { en } from '../localization/en';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
+import { Tooltip } from 'react-tooltip';
  
 type HeaderProps = {
   renderThis: string;
@@ -22,7 +23,7 @@ const Header = ({ renderThis, setRenderThis }: HeaderProps) => {
           <PhotoProvider maskOpacity={0.5}>
             <PhotoView src={'../../profile_photos/ako2.webp'}>
               <img 
-                className={`border-4 ${darkMode ? 'border-gray-500' : 'border-gray-300'} rounded-full w-28 h-28 sm:w-48 sm:h-48 z-50`} 
+                className={`border-4 ${darkMode ? 'border-gray-500' : 'border-gray-300'} rounded-full w-28 h-28 sm:w-48 sm:h-48 z-20 hover:cursor-pointer`} 
                 src='../../profile_photos/ako2.webp'
                 alt="profile_pic" 
                 loading='lazy'
@@ -31,7 +32,8 @@ const Header = ({ renderThis, setRenderThis }: HeaderProps) => {
           </PhotoProvider>
           <div className='flex flex-col gap-1 text-center'>
             <h1 className={`${darkMode ? 'text-gray-400' : 'text-black'} text-center text-base sm:text-3xl font-semibold sm:mt-14`}>{en.header.fullname}</h1>     
-            <p title='My nicknames' className={`${darkMode ? 'text-gray-400' : 'text-black'} italic text-xs sm:text-sm`}>{en.header.nicknames}</p>       
+            <p data-tooltip-id="my-nicknames" data-tooltip-content="My nicknames!" className={`${darkMode ? 'text-gray-400' : 'text-black'} italic text-xs sm:text-sm`}>{en.header.nicknames}</p>       
+            <Tooltip id="my-nicknames" place={'bottom'} />
           </div>
         </div>
         <div className='flex flex-row sm:flex-col items-end gap-2 p-3'>
