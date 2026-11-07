@@ -22,7 +22,7 @@ function Projects() {
                         <p>{project.description}</p>
                         <PhotoProvider maskOpacity={0.5}>
                             <PhotoView src={project.image}>
-                                <img className='h-auto w-auto rounded-md border-2' src={project.image} alt="project_img" loading="lazy" />
+                                <img className='h-auto w-auto rounded-md border-2 hover:cursor-pointer' src={project.image} alt="project_img" loading="lazy" />
                             </PhotoView>
                         </PhotoProvider>
                         <p className="text-lg font-mono"><span className="font-bold font-sans">{en.projects.techstack}</span> {project.techStack.join(', ')}</p>

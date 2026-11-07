@@ -5,6 +5,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import { FaBirthdayCake } from "react-icons/fa";
 import { en } from '../localization/en';
 import codewarsLogo from '../assets/codewars-logo.svg';
+import { Tooltip } from 'react-tooltip';
 
 function Details() {
 
@@ -17,15 +18,18 @@ function Details() {
                 <ul className="flex flex-col gap-3 mt-5">
                     <li className="flex items-center gap-2 text-base">
                         <h1><IoMdSchool /></h1>
-                        <h1>{en.details.school}</h1>
+                        <h1 data-tooltip-id="university-graduated" data-tooltip-content="University Graduated">{en.details.school}</h1>
+                        <Tooltip id="university-graduated" place={'left'} />
                     </li>
                     <li className="flex items-center gap-2 text-base">
                         <h1><FaBirthdayCake /></h1>
-                        <h1>{en.details.birthday}</h1>
+                        <h1 data-tooltip-id="birthdate" data-tooltip-content="Birthdate">{en.details.birthday}</h1>
+                        <Tooltip id="birthdate" place={'left'} />
                     </li>
                     <li className="flex items-center gap-2 text-base">
                         <h1><IoLocationSharp /></h1>
-                        <h1>{en.details.address}</h1>
+                        <h1 data-tooltip-id="address" data-tooltip-content="Address">{en.details.address}</h1>
+                        <Tooltip id="address" place={'left'} />
                     </li>
                 </ul>
             </div>
@@ -34,7 +38,7 @@ function Details() {
                 <ul className="flex flex-col gap-3 mt-5">
                     <li className="flex items-center gap-2 text-base">
                         <h1><MdOutlineMailOutline /></h1>
-                        <a href={`mailto:${en.details.email}`} className="break-all hover:text-gray-500">
+                        <a href={`mailto:${en.details.email}`} className="break-all hover:text-green-600">
                             {en.details.email}
                         </a>
                     </li>
@@ -47,8 +51,8 @@ function Details() {
                         <a className="hover:text-blue-400" href="https://www.linkedin.com/in/moses-anthony-fat-36962b261/" target="_blank" rel="noopener">{en.details.linkedIn}</a>
                     </li>
                     <li className="flex items-center gap-2 text-base">
-                        <img className="w-5 h-5" src={codewarsLogo} alt="icon" loading="lazy" />
-                        <a className="hover:text-blue-400" href="https://www.codewars.com/users/moshe002" target="_blank" rel="noopener">{en.details.codewars}</a>
+                        <img className="w-5 h-5" src={codewarsLogo} alt="codewars_icon" loading="lazy" />
+                        <a className="hover:text-red-400" href="https://www.codewars.com/users/moshe002" target="_blank" rel="noopener">{en.details.codewars}</a>
                     </li>
                 </ul>
             </div>
